@@ -3,7 +3,7 @@ int main (){
     int num=0,p=0,c=0,i=0,count=0;
     do{
         scanf("%d",&num);
-        for(int i=2 ; i < num/2 ; i++) {
+        for(int i=2 ; i <= num ; i++) {
         if(num%i == 0){
             p++;
             count = 1;
@@ -11,7 +11,7 @@ int main (){
             }
         }
         if(count == 0) {
-          c++;
+            c++;
         }  
     }while(num != -1);
     printf("%d\n Prime numbers:",p);
