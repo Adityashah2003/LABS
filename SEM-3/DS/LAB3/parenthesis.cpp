@@ -1,46 +1,73 @@
-    #include <iostream>
-    using namespace std;
-    int top;
-    void  check (char str[ ], int n, char stack [ ])
+#include <iostream>
+using namespace std;
+int top = -1; //Globally defining the value of top as the stack is empty
+
+    void push (int stack[ ] , int x , int n)
     {
-        for(int i = 0 ; i < n ; i++ )
+        if ( top == n-1 )       //If the top position is the last of position of the stack, this means that the stack is full.
         {
-            if (str [ i ] == ‘(’)
-            {
-                top = top + 1;
-                stack[ top ] = ‘ ( ’;
-            }
-            if(str[ i ] == ‘)’ )
-            {
-                if(top == -1 )
-                {
-                    top = top -1 ;
-                    break ;
-                 }
-                else
-                {
-                     top = top -1 ;
-                }
-            }
+            cout << "Stack is full.Overflow condition!" ;
         }
-        if(top == -1)
-            cout << “String is balanced!” << endl;
         else
-            cout << “String is unbalanced!” << endl ;
+        {
+            top = top +1 ;            //Incrementing the top position 
+            stack[ top ] = x ;       //Inserting an element on incremented position  
+        }
     }
-
-    int main ( ) 
+    bool isEmpty ( )
     {
-        //balanced parenthesis string.
-        char str[  ] = { ‘(‘ , ‘a’ , ‘+’, ‘ ( ’, ‘b ’ , ‘-’ , ‘ c’ ,‘)’ , ‘ ) ’} ;
+        if ( top == -1 )  //Stack is empty
+            return true ; 
+        else
+            return false;
+    }
+    void pop ( ) 
+    {
 
-        // unbalanced string . 
-        char str1 [ ] = { ‘(’ , ‘(’ , ‘a’ , ‘ + ’ , ‘ b’ , ‘)’ } ;
-        char stack [ 15 ] ;
-        top = -1;   
-        check (str , 9 , stack );      //Passing balanced string   
-        top = -1 ;
-        check(str1 , 5 , stack) ;    //Passing unbalanced string
-        return 0;
+        if( isEmpty ( ) )
+        {
+            cout << "Stack is empty. Underflow condition! " << endl ;
+        }
+        else    
+        {
+             top = top - 1 ; //Decrementing top’s position will detach last element from stack            
+        }
+    }
+    int size ( )
+    {
+        return top + 1;
+    }
+    int topElement (int stack[])
+    {
+        return stack[ top ];
+    }
+    //Let's implement these functions on the stack given above 
 
-    } 
+    int main( )
+    {
+        int stack[ 3 ];
+        // pushing element 5 in the stack .
+        push(stack , 5 , 3 ) ;
+
+        cout << "Current size of stack is " << size ( ) << endl ;
+
+        push(stack , 10 , 3);
+        push (stack , 24 , 3) ;
+
+        cout << "Current size of stack is " << size( ) << endl ;
+
+        //As the stack is full, further pushing will show an overflow condition.
+        push(stack , 12 , 3) ;
+
+        //Accessing the top element
+        cout << "The current top element in stack is " << topElement(stack) << endl;
+
+        //Removing all the elements from the stack
+        for(int i = 0 ; i < 3;i++ )
+            pop( );
+        cout << "Current size of stack is " << size( ) << endl ;
+
+        //As the stack is empty , further popping will show an underflow condition.
+        pop ( );  
+
+    }
