@@ -14,7 +14,7 @@ class emp{
         da=ad;
         hra = arh;
         salary = pay;
-    }                                //parameterised constructor*/
+    }                                //parameterised constructor not needed*/
     void getdata(){
         Scanner sc = new Scanner(System.in);
         emp_name = sc.next();   
