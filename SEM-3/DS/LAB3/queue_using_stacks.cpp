@@ -64,39 +64,38 @@ void Stack :: display(){
 }
 }
 class Queue {
-    Stack s1, s2;
+    Stack s;
 public: 
     void enQueue(int x)
     {
-        // Move all elements from s1 to s2
-        while (!s1.isEmpty()) {
-            s2.push(s1.topele());
-            s1.pop();
-        }
- 
-        // Push item into s1
-        s1.push(x);
- 
-        // Push everything back to s1
-        while (!s2.isEmpty()) {
-            s1.push(s2.topele());
-            s2.pop();
-        }
+        s.push(x);
     }
  
     // Dequeue an item from the queue
     int deQueue()
     {
-        // if first stack is empty
-        if (s1.isEmpty()) {
-            cout << "Q is Empty";
+        if (s.isEmpty()) {
+            cout << "Q is empty";
             exit(0);
         }
  
-        // Return top of s1
-        int x = s1.topele();
-        s1.pop();
-        return x;
+        // pop an item from the stack
+        int x = s.topele();
+        s.pop();
+ 
+        // if stack becomes empty, return
+        // the popped item
+        if (s.isEmpty())
+            return x;
+ 
+        // recursive call
+        int item = deQueue();
+ 
+        // push popped item back to the stack
+        s.push(x);
+ 
+        // return the result of deQueue() call
+        return item;
     }
 };
  
