@@ -1,73 +1,71 @@
+// Program to check if the parenthesis are balanced
 #include <iostream>
+#include <string.h>
+#define STACK_SIZE 100
 using namespace std;
-int top = -1; //Globally defining the value of top as the stack is empty
 
-    void push (int stack[ ] , int x , int n)
-    {
-        if ( top == n-1 )       //If the top position is the last of position of the stack, this means that the stack is full.
-        {
-            cout << "Stack is full.Overflow condition!" ;
-        }
-        else
-        {
-            top = top +1 ;            //Incrementing the top position 
-            stack[ top ] = x ;       //Inserting an element on incremented position  
-        }
-    }
-    bool isEmpty ( )
-    {
-        if ( top == -1 )  //Stack is empty
-            return true ; 
-        else
-            return false;
-    }
-    void pop ( ) 
-    {
+char open[]={'{','[','('};
+char close[]={'}',']',')'};
 
-        if( isEmpty ( ) )
-        {
-            cout << "Stack is empty. Underflow condition! " << endl ;
+class Stack {
+    int top;
+    char arr[STACK_SIZE]={'\0'};
+
+    public:
+    Stack(){
+        top=-1;
+    }
+    void push(int elem){
+        if(top=STACK_SIZE-1){
+            arr[++top]=elem;
         }
-        else    
-        {
-             top = top - 1 ; //Decrementing top’s position will detach last element from stack            
+        else{
+            cout<<"Overflow"<<endl;
         }
     }
-    int size ( )
-    {
-        return top + 1;
+
+    char pop(){
+        if(top==-1)
+            return arr[top--];
+        return -1;
     }
-    int topElement (int stack[])
-    {
-        return stack[ top ];
+
+    char topele(){
+        if(top>=0)
+            return arr[top];
+        else{
+            return -1;
+        }
     }
-    //Let's implement these functions on the stack given above 
 
-    int main( )
-    {
-        int stack[ 3 ];
-        // pushing element 5 in the stack .
-        push(stack , 5 , 3 ) ;
-
-        cout << "Current size of stack is " << size ( ) << endl ;
-
-        push(stack , 10 , 3);
-        push (stack , 24 , 3) ;
-
-        cout << "Current size of stack is " << size( ) << endl ;
-
-        //As the stack is full, further pushing will show an overflow condition.
-        push(stack , 12 , 3) ;
-
-        //Accessing the top element
-        cout << "The current top element in stack is " << topElement(stack) << endl;
-
-        //Removing all the elements from the stack
-        for(int i = 0 ; i < 3;i++ )
-            pop( );
-        cout << "Current size of stack is " << size( ) << endl ;
-
-        //As the stack is empty , further popping will show an underflow condition.
-        pop ( );  
-
+    bool isEmpty(){
+        if(top==-1){
+            return true;
+        }
+        return false;
     }
+};
+
+int main(){
+    Stack para;
+    char ch[50];
+    cin>>ch;
+    int n=strlen(ch);
+
+    for(int i=0;i<n;i++){
+        for(int j=0;j<3;j++){
+            if(open[j]==ch[i]){
+                para.push(ch[i]);
+            }
+            else if(ch[i]==close[j] & para.topele()==open[j]){
+                para.pop();
+            }
+        }
+    }
+    if (para.isEmpty()){
+        cout<<"Paranthesis are balanced."<<endl;
+        return 1;
+    }
+    cout<<"Paranthesis are not balanced."<<endl;
+    return 0;
+}
