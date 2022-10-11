@@ -1,6 +1,6 @@
 import java.util.*;
 
-class five {
+class calc {
 	public static void main(String args[]){
 		Scanner sc = new Scanner(System.in);
 		char lmao;
