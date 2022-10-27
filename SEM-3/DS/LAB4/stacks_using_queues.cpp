@@ -1,21 +1,28 @@
 #include <iostream>
 using namespace std;
-const int SIZE=100;
+#define max 100
 
-class Queue{
-    private:
-    int front;
+class queue{
+public:
     int rear;
-    int arr[SIZE];
-    public:
-    Queue(){
-        rear=front=-1;
+    int front;
+    int arr[max];
+    int i =0;
+    queue(){
+        rear=-1;
+        front=-1;
     }
     bool isEmpty(){
-        return front==-1 && rear==-1;
+        if(front ==-1)
+            return true;
+        else
+            return false;
     }
     bool isFull(){
-        return rear==SIZE-1;
+        if(rear == max-1)
+            return true;
+        else 
+            return false;
     }
     void enQ(int elem){
         if(isFull())
@@ -25,54 +32,68 @@ class Queue{
         arr[++rear]=elem;
 
     }
-        int deQ(){
+    int deQ(){
         if(isEmpty()){
             cout<<"Empty Queue";
             return -1;    
+        }
+        else if(front==rear){
+            int temp=arr[rear];
+            front=rear=-1;
+            return temp;
         }
         else{
             return arr[front++];
         }
     }
-  
+    int size(){
+        return (rear-front);
+    }
+    void display(){
+    for(i=front;i<=rear;i ++){
+        cout<<arr[i]<<endl;
+        }
+    }
 };
-class Stack {
-    Queue q, q1, q2;
-public:
-    void pop()
-	{
-		if (q1.isEmpty())
-			return;
-		q1.deQ();
-	}
-    void push(int x)
-	{
-		q2.enQ(x);
-		while (!q1.isEmpty()) {
-			q2.enQ(q1.deQ());
-			q1.deQ();
-		}
-		q = q1;
+
+class stack{
+    queue q,q1,q2;
+public: 
+    void push(int x){
+        q2.enQ(x);
+        while(!q1.isEmpty()){
+            q2.enQ(q1.deQ());
+        }
+        q = q1;
 		q1 = q2;
 		q2 = q;
-	}
+    }
+    void pop(){
+        if(q1.isEmpty())
+            cout<<"Stack is empty";
+        else
+            q1.deQ();
+    }
     int top()
 	{
 		if (q1.isEmpty())
 			return -1;
-		return q1.deQ();
+        else
+		    return q1.rear;
 	}
+    void disp(){
+        q1.display();
+    }
+    
 };
- 
 // Driver code
 int main()
 {
-    Stack s;
-    s.push(13);
-    cout<<s.top();
+    stack s;
+    s.push(5);
     s.push(1);
-    cout<<s.top();
-    s.pop();
-    cout<<s.top();
+    s.push(78);
+    s.disp();
+
     return 0;
 }
