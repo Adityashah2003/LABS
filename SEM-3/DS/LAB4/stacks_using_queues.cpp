@@ -1,4 +1,3 @@
-//Program to find the fast transpose of a matrix using Sparse Row Method
 #include <iostream>
 using namespace std;
 #define max 10
@@ -75,29 +74,20 @@ public:
     {
         if (q1.isEmpty())
             return;
- 
-        // Leave one element in q1 and
-        // push others in q2.
         while (q1.size() != 1) {
             q2.enQ(q1.front1());
             q1.deQ();
         }
- 
-        // Pop the only left element
-        // from q1
         q1.deQ();
  
-        // swap the names of two queues
         Queue q = q1;
         q1 = q2;
         q2 = q;
     }
- 
     void push(int x)
     {
         q1.enQ(x);
     }
- 
     int top()
     {
         if (q1.isEmpty())
