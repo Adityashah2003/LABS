@@ -32,6 +32,7 @@ int main(){
         cin>>arr[i];
 
     insertionSort(arr,n);
+    cout<<"Total steps are: "<<counter;
 
     for(int i=0;i<n;i++){
         cout<<arr[i]<<" ";
