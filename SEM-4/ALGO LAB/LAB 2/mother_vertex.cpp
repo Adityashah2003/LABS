@@ -66,4 +66,5 @@ int main(){
         cout << endl;
     }
     mother_vertex();
+    cout<<counter;
 }
