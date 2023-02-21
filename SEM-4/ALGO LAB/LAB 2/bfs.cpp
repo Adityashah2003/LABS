@@ -4,28 +4,37 @@ using namespace std;
 queue <int> q;
 int vertices, edges;
 int adj[10][10];
+int counter=0;
 
 void addEdge(int x,int y)
 {
     adj[x][y] = 1;
     adj[y][x] = 1;
+    counter+=2;
 }
 void bfs(int source,int visited[]){
     int z;
     q.push(source);
+    counter+=2;
     while(!q.empty()){
         z = q.front();
+        counter+=2;
         // if(z%2==0)
         //     cout<<z;
         cout<<z;
         q.pop();
+        counter+=2;
         for(int i=0;i<vertices;i++){
+            counter++;
             if(adj[z][i]==1 && visited[i]==0){
                 visited[i]=1;
                 q.push(i);
+                counter+=3;
             }
         }
+        counter++;
     }
+    counter++;
 }
 
 int main(){
