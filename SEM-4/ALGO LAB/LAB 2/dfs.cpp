@@ -60,5 +60,5 @@ int main(){
 
     cout << "\nDFS is : ";
     dfs(source,visited);
-
+    cout<<counter;
 }
