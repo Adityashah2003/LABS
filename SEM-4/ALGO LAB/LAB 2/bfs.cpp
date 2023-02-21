@@ -73,5 +73,6 @@ int main(){
 
     cout << "\nBFS is : ";
     bfs(source,visited);
+    cout<<counter;
 }
 
