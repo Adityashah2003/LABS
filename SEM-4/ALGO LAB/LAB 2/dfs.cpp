@@ -9,38 +9,22 @@ void addEdge(int x,int y)
 {
     adj[x][y] = 1;
     adj[y][x] = 1;
+    counter+=2;
 }
-
-///// iterative--does not work ////////
-
-// void dfs(int source,int visited[]){
-//     s.push(source);
-//     while(!s.empty()){
-//         int z = s.top();
-//         cout<<z;
-//         s.pop();
-//         for(int i=0;i<vertices;i++){
-//             if(adj[z][i]==1 && visited[i]==0){
-//                 visited[i]=1;
-//                 s.push(i);
-//             }
-//         }
-//         visited[z]=1;
-//         
-//         }
-//     }
-// }
 
 void dfs(int source,int visited[]){
     // if(source%2!=0)
     //     cout<<source;
     cout<<source;
     visited[source]=1;
+    counter+=3;
     for(int i=0;i<=vertices;i++){
         if(adj[source][i]==1 && visited[i]==0){
                 dfs(i,visited);
+                counter+=2;
             }
     }
+    counter++;
 }
 
 int main(){
