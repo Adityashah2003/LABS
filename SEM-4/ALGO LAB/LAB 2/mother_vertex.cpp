@@ -7,16 +7,21 @@ int adj[10][10];
 
 void addEdge(int x,int y){
     adj[x][y] = 1;
+    counter++;
 }
 
 void dfs(int source,int visited[]){
     cout<<source;
     visited[source]=1;
+    counter+=2;
     for(int i=0;i<=vertices;i++){
+        counter++;
         if(adj[source][i]==1 && visited[i]==0){
+                counter+=2;
                 dfs(i,visited);
         }
     }
+    counter++;
 }
 
 void mother_vertex(){
