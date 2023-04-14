@@ -6,8 +6,7 @@ int vertices, edges;
 int adj[10][10];
 int counter=0;
 
-void addEdge(int x,int y)
-{
+void addEdge(int x,int y){
     adj[x][y] = 1;
     adj[y][x] = 1;
     counter+=2;
@@ -52,16 +51,12 @@ int main(){
         addEdge(m,n);
     }
     cout << "\nThe Adjacency Matrix is : \n\n";
-    for (i = 0; i < vertices; i++)
-    {
+    for (i = 0; i < vertices; i++){
         for (j = 0; j < vertices; j++)
-        {
             cout << adj[i][j] << " ";
-        }
         cout << endl;
     }
     cout << endl;
-
     cout << "Enter Source : ";
     int source;
     cin >> source;
@@ -75,4 +70,3 @@ int main(){
     bfs(source,visited);
     cout<<counter;
 }
-

@@ -1,0 +1,10 @@
+apple
+banana
+custard apple
+jackfruit
+mango
+orange
+papaya
+pear
+pineapple
+strawberry

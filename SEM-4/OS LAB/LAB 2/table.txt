@@ -1,0 +1,7 @@
+roll no.	name	marks
+1	joshita	100
+2	meenu	83
+3	nalini	60
+4	pardha	90
+5	pvsp	99	
+

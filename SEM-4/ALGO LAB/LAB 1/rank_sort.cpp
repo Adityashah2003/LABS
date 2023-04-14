@@ -4,9 +4,8 @@ using namespace std;
 int r[20];
 void rank1(int arr[],int n){  
     int i=0;
-    for(i=0;i<n;i++){
+    for(i=0;i<n;i++)
         r[i]=0;
-    }
     for(i=0;i<n;i++){
         for(int j=0;j<i;j++){
             if(arr[i]>=arr[j])
@@ -16,7 +15,6 @@ void rank1(int arr[],int n){
         }
     }
 }
-
 void rank_sort(int a[],int n){
     rank1(a,n);
     int u[20];

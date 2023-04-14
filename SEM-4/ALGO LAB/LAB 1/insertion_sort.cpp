@@ -2,8 +2,7 @@
 using namespace std;
 
 int counter=0;
-void insertionSort(int arr[], int n)
-{
+void insertionSort(int arr[], int n){
     int i, key, j;
     counter++;
     for (i = 1; i < n; i++){
@@ -14,7 +13,7 @@ void insertionSort(int arr[], int n)
         while (j >= 0 && arr[j] > key){
             counter++;
             swap(arr[j + 1],arr[j]);
-            j = j - 1;
+            j--;
             counter++;
             counter++;
         }
@@ -30,12 +29,9 @@ int main(){
     int arr[n];
     for(int i=0;i<n;i++)
         cin>>arr[i];
-
     insertionSort(arr,n);
     cout<<"Total steps are: "<<counter;
-
-    for(int i=0;i<n;i++){
+    for(int i=0;i<n;i++)
         cout<<arr[i]<<" ";
-    }
 }
 

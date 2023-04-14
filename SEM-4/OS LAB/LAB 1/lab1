@@ -1,0 +1,1870 @@
+STUDENT1@MIT-ICT-LAB8-10:~$ date
+Monday 30 January 2023 02:11:09 PM IST
+STUDENT1@MIT-ICT-LAB8-10:~$ ls
+Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+STUDENT1@MIT-ICT-LAB8-10:~$ man ls
+STUDENT1@MIT-ICT-LAB8-10:~$ ls -l
+total 32
+drwx------ 3 STUDENT1 STUDENT1 4096 Jan 30 10:26 Desktop
+drwx------ 2 STUDENT1 STUDENT1 4096 Dec 15 12:38 Documents
+drwx------ 2 STUDENT1 STUDENT1 4096 Jan 30 09:53 Downloads
+drwx------ 2 STUDENT1 STUDENT1 4096 Dec 15 12:38 Music
+drwx------ 2 STUDENT1 STUDENT1 4096 Dec 15 12:38 Pictures
+drwx------ 2 STUDENT1 STUDENT1 4096 Dec 15 12:38 Public
+drwx------ 2 STUDENT1 STUDENT1 4096 Dec 15 12:38 Templates
+drwx------ 2 STUDENT1 STUDENT1 4096 Dec 15 12:38 Videos
+STUDENT1@MIT-ICT-LAB8-10:~$ ls -al
+total 80
+drwx------ 16 STUDENT1 STUDENT1 4096 Jan 30 11:30 .
+drwxr-xr-x 12 root     root     4096 Dec 15 12:35 ..
+-rw-------  1 STUDENT1 STUDENT1  112 Jan 30 11:30 .bash_history
+-rwx------  1 STUDENT1 STUDENT1  220 Dec 15 12:32 .bash_logout
+-rwx------  1 STUDENT1 STUDENT1 3771 Dec 15 12:32 .bashrc
+drwx------ 13 STUDENT1 STUDENT1 4096 Jan 30 11:25 .cache
+drwx------ 13 STUDENT1 STUDENT1 4096 Jan 30 09:16 .config
+drwx------  3 STUDENT1 STUDENT1 4096 Jan 30 10:26 Desktop
+drwx------  2 STUDENT1 STUDENT1 4096 Dec 15 12:38 Documents
+drwx------  2 STUDENT1 STUDENT1 4096 Jan 30 09:53 Downloads
+drwx------  3 STUDENT1 STUDENT1 4096 Jan 30 10:26 .gnupg
+drwx------  3 STUDENT1 STUDENT1 4096 Dec 15 12:38 .local
+drwx------  4 STUDENT1 STUDENT1 4096 Jan 30 09:49 .mozilla
+drwx------  2 STUDENT1 STUDENT1 4096 Dec 15 12:38 Music
+drwx------  2 STUDENT1 STUDENT1 4096 Dec 15 12:38 Pictures
+-rwx------  1 STUDENT1 STUDENT1  807 Dec 15 12:32 .profile
+drwx------  2 STUDENT1 STUDENT1 4096 Dec 15 12:38 Public
+drwx------  2 STUDENT1 STUDENT1 4096 Jan 30 10:26 .ssh
+drwx------  2 STUDENT1 STUDENT1 4096 Dec 15 12:38 Templates
+drwx------  2 STUDENT1 STUDENT1 4096 Dec 15 12:38 Videos
+STUDENT1@MIT-ICT-LAB8-10:~$ ls -R
+.:
+Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+
+./Desktop:
+210911310
+
+./Desktop/210911310:
+'lab 1'
+
+'./Desktop/210911310/lab 1':
+q1.cc  q2.cc
+
+./Documents:
+
+./Downloads:
+ICT3269_NetworkSimulationLab_Final.pdf
+
+./Music:
+
+./Pictures:
+
+./Public:
+
+./Templates:
+
+./Videos:
+STUDENT1@MIT-ICT-LAB8-10:~$ touch newfile.txt
+STUDENT1@MIT-ICT-LAB8-10:~$ ls
+Desktop    Downloads  newfile.txt  Public     Videos
+Documents  Music      Pictures     Templates
+STUDENT1@MIT-ICT-LAB8-10:~$ ls newfile.txt
+newfile.txt
+STUDENT1@MIT-ICT-LAB8-10:~$ cat >newtext.txt
+hi
+this is my first lab
+STUDENT1@MIT-ICT-LAB8-10:~$ ls >file.txt
+STUDENT1@MIT-ICT-LAB8-10:~$ cat newtext.txt
+hi
+this is my first lab
+STUDENT1@MIT-ICT-LAB8-10:~$ pwd
+/home/STUDENT1
+STUDENT1@MIT-ICT-LAB8-10:~$ file newfile
+newfile: cannot open `newfile' (No such file or directory)
+STUDENT1@MIT-ICT-LAB8-10:~$ file *
+Desktop:     directory
+Documents:   directory
+Downloads:   directory
+file.txt:    ASCII text
+Music:       directory
+newfile.txt: empty
+newtext.txt: ASCII text
+Pictures:    directory
+Public:      directory
+Templates:   directory
+Videos:      directory
+STUDENT1@MIT-ICT-LAB8-10:~$ mkdir 210911310
+STUDENT1@MIT-ICT-LAB8-10:~$ cd 210911310
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ rmdir 210911310
+rmdir: failed to remove '210911310': No such file or directory
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ cd ..
+STUDENT1@MIT-ICT-LAB8-10:~$ pwd
+/home/STUDENT1
+STUDENT1@MIT-ICT-LAB8-10:~$ cd 210911310
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ rm -Rf 210911310
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ ^C
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ man ls
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ ls n*
+newfile.txt  newtext.txt
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ cd ..
+STUDENT1@MIT-ICT-LAB8-10:~$ ls D*
+Desktop:
+210911310
+
+Documents:
+
+Downloads:
+ICT3269_NetworkSimulationLab_Final.pdf
+STUDENT1@MIT-ICT-LAB8-10:~$ ls D??????
+210911310
+STUDENT1@MIT-ICT-LAB8-10:~$ ls D??????*
+Desktop:
+210911310
+
+Documents:
+
+Downloads:
+ICT3269_NetworkSimulationLab_Final.pdf
+STUDENT1@MIT-ICT-LAB8-10:~$ ls D???????*
+Documents:
+
+Downloads:
+ICT3269_NetworkSimulationLab_Final.pdf
+STUDENT1@MIT-ICT-LAB8-10:~$ ls D[0-9]
+ls: cannot access 'D[0-9]': No such file or directory
+STUDENT1@MIT-ICT-LAB8-10:~$ ls |wc newtext.txt
+ 2  6 24 newtext.txt
+STUDENT1@MIT-ICT-LAB8-10:~$ ls |wc
+     10      10      89
+STUDENT1@MIT-ICT-LAB8-10:~$ cd 210911310
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ ls |wc
+      5       6      44
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ ls n[a-z]
+ls: cannot access 'n[a-z]': No such file or directory
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ ls lab[0-9]
+lab1
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ ls n['a'-'z']
+ls: cannot access 'n[a-z]': No such file or directory
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ ls n['a'-'z']*
+newfile.txt  newtext.txt
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ man ls
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ man ls
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ .
+bash: .: filename argument required
+.: usage: . filename [arguments]
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ ls n[a-z].txt
+ls: cannot access 'n[a-z].txt': No such file or directory
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ cp newtext.txt file.txt
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ head -n 1 file.txt
+hi
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ head -n 2 file.txt
+hi
+this is my first lab
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ file -name new* .
+file: invalid option -- 'a'
+Usage: file [-bcCdEhikLlNnprsSvzZ0] [--apple] [--extension] [--mime-encoding]
+            [--mime-type] [-e <testname>] [-F <separator>]  [-f <namefile>]
+            [-m <magicfiles>] [-P <parameter=value>] <file> ...
+       file -C [-m <magicfiles>]
+       file [--help]
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ file-name new* .
+
+Command 'file-name' not found, did you mean:
+
+  command 'filename' from deb wcstools (3.9.5-3)
+
+Try: apt install <deb name>
+
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ -name new* .
+
+Command '-name' not found, did you mean:
+
+  command 'uname' from deb coreutils (8.30-3ubuntu2)
+
+Try: apt install <deb name>
+
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ find -name new* .
+find: paths must precede expression: `newtext.txt'
+find: possible unquoted pattern after predicate `-name'?
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ ^C
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ find -name new* .
+find: paths must precede expression: `newtext.txt'
+find: possible unquoted pattern after predicate `-name'?
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ find -name "new*"
+./newfile.txt
+./newtext.txt
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ cd ..
+STUDENT1@MIT-ICT-LAB8-10:~$ find 210911310 -name "new*"
+210911310/newfile.txt
+210911310/newtext.txt
+STUDENT1@MIT-ICT-LAB8-10:~$ find . -name "2*"
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2B21EBED24DC3C15FDDFDE6EA6A2DEA4CBACB377
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2C3C93A7B06B63958C9CCEB42782734EB41A37C1
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/272469B5FA22EDE6B88625F5F61A359B19965B91
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/234FED63737E85D0869648A24450CDAD2451BAB2
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2B8CDE9913289BFC47FE94680E660B4F30C7E5B5
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/20E67EDDB29839FA2E07A8453D601FE025F65A9D
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/250771F509512CCC6F195A247C437E48E65F98E0
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/23C9F1E093C1AAA49468832A09017AD469F92B46
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/28F1130C65B82F7B325E856D0770968A3C280789
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2AE0ADF80C97E01E2BF1CA42B6288C8CB2CE391F
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2C699983ECF972DB83693FFE45253B11D671EC04
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/29B89A77CDDA3FF294FF37831C8842197B1F4490
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2AD4D75786BEFC86DFE37655BC7F0C5C0183D29B
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/28BCA533DF68B81C2C5BA776F3060AE2B97FCFE2
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2903430DE618D052F91A413A24107DEAA46DD69A
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/233FD8335A2455908BC98A73C887362784CA81B2
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/25BEA50EC0C53CEC464E59F38A578F573A17E432
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/27E89EF41AAAC3F528CF8A6437AC8DEA397F1589
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2F7AD320C9A19A2E093D62B0C379ED46D0404FE3
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/24C0F89BFF2ACB57466EF3A09D666607D973424A
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2AE89E8944C45BCF2ADF4999C0E827850F7AEFD6
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2A2F2C49639A69B18F6A3173B994B1793B6ABDAD
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2C7A05BB52FBE8E729ED70A58C792C326CEDF173
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2FA66A346DECFDD93C4B4EBC124E7E8A910CB694
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/203A5441B501084C4744578D2394B00D2C677C59
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2D6B199709A8EA3F1DE69C904547C90EBB3B204C
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2EB12522567BA7A480C33039B4BDD5C7E54E9A92
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/243431038E22F95D6E56185A6D699FE623616B20
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/29BA41D8214B3B727DE9E1941E3DEAB68A258627
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/29B5C59BA590E6C5BDA19E8BFC5BAF310605DE95
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2577C31A88B5933FFF1AD9112AE2B5C8A4453E9A
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/23B7EBFAE9AB3B47E762991F7A5422B558BF73B4
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/256C4BA84215C2F1791D313409231146B1FFE751
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2527A4238EB1D0D63C9DDA2B1F3A10CB1885836F
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2DB231528ED6884A9AC379E5C8B591A91D59F776
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/29320019DF79AB852CCCE5414AB9D971DE943725
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/223F7E95D88FBBB5A2A0658C01FA80CD8EF9879F
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2C5B8C561F3FC4D6EB6DBCB6D651BDF55A08F0CA
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/28227D2ED03AC57B0623DBF149196CDEA7BAD352
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2F95DF0EE46A1ACC07F809E11F2866E13E73E924
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2E0E883539F87C03D82998EA69385830223FB708
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2B2114B4420DE74465F78B627B918B8C5307428C
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2603EC1CFDE353D3CAAC8FB9FECE5BDB6949FF40
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/23396A4C76EE2A7B0D2FC38608285CA21BED9D9A
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2811E3A1784A416A1F878D78242204F1575DC640
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2975EDCB8596CBB9862B5B7A65312E10ACF84551
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/28C68B5F41D0DAFEA49F2DAA5131EE61EA63D7ED
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/27824A440631E3C2F731E627E5AEF21E33EDC9CE
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/288A27D3B2AC66AF2F53417DBCAEB14FA8DBCAB8
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/263CF8961697DBD015011A1DE6CB726247A67CDD
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2680466E9F1C734D969DCCBD265FF051EDF7E828
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/22F59957B7E08CD6CCFED6AF2A1DF26FE157DF40
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/274726D68363916A4DCF96CBDDAB988950D96DB3
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/221A9A4E256E9E0B9EBF295FCB49862AC3F98D59
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/28FF838F2EF68801A93A3955BD27E79A2EAC587B
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/28A6AFC75C8AD931097E9A6F157879DA9119F719
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2BD4A465CC1CAA97C59EF792A51D84EC74B072D4
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/25F13559D5A7D685CF4A745C8FCDCF3D1503ACE2
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2CE4F09DA15304C5F36D96476DDC25BE8BE33213
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2F770BA7A8219BF2440DB839B57F3DFDCAE6D4A4
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2787DE2820A5CDD01978D00E4550F41BEC8F6381
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/25214AC7A33AD709A293B6504BE702AD5C778838
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2EB25E876B0816E893C071B55DD56335D4D41522
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/26FF60C024843430B49A889E3B4F1FBC78321C89
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/260B15B53F19456829D7A4913A4FCB5EEEAAD6B8
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2E8E74C8905197EB92D631AA0A88B951D5427EAF
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/23154C7A32718B62C1914817F861CE0C73F0F9AD
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/28DB73CE9FD1648D336D1F06197042DC976939F2
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/29A849C56520F804CB0BBA460A5C50B46E47E3B9
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/27EC969B9691C8073626599D50A08AEEE80F88E1
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/24E0C4BC4AEC0B88980C72765FBF284C6DF4A80A
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/22895D733ABE949D02FF1CC851F0916DE9456BDB
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2BD63CA6483B1A886205DDD39354E6FFF5F417A0
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2AFE5B68F2B7E5FE18CD852C2A87A1C581A88690
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/26A72DE24E36932A476E9F43C90C4B8F5A96D1AF
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/219224386BA189E5AE922973AD2612FED3DDC376
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2D15B652EBF2450E194A675A829E03D1E0634796
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2866D8052BB801D85A3B7E203A40E815B34727FB
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/26393D66B115AFE47438E6234CB5F8B3B0F67C11
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2CFCF2760E053DD86290B024AC645CB77CFDC94A
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2CA6B42C596CC36071228C688CF0E8F8C5127EAA
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2BB00834ED7ED3A906EA4EBB26FD9E168885EDF8
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2495E6E89C51A7AFEB874A5AA20BAFD6CA85C6D1
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/22FCB3D5CF160C213D96BB328D5B7A09F16AB6DB
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2AB252E8ADCB3B775CFC1E648609175EC0EC30E0
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2766195C6454006FEF1BD8D0FAFD89B847426282
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/210963866FE6BD0831A4CA6A3956AC16D74A6694
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/28B88ACEC1091E208BFCE32433002A345EF23C9B
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2045FDC783F6A5D3A09103527A89D75F58B4B2D9
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/203C8B2E2691AD6D696B8B40A23800D491D1B7A0
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/28C689785C86690525C99C1DEDFAF81DD12A0768
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/29331D75218E9AEB1C492D02120D774994BD7433
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2C1FDA7E576B5EDE99483F04ADF882B766DF9940
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2F2E0CF495C558AEB91C0AD341A73B0444651E0C
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2895D329D9CDE4EEC4507C923E0791BB67DB775C
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2916A0D501E364E85A2BE6AF4ED154BCF5E5C39D
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2C033113E46D3048593E0378895288D5FDED5657
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2A8B1DE98E69C22F82CA6B1A7102AEA6A943575D
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/22E02C4BB991ED2BB4AAD4A6A7CAE5102F78B9CD
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/24092C5DF77303D8AA3F0B6950D3BAE4CAFBFD31
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/20C8782D3A4225085BC7CFAFC600CE81E194B0BD
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/25D44DD3CDD230AAB85D8CEB062A05AAA631087D
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/28B27E85642741EF6F5F88A5766545202B620817
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2D010A4D466D06717CDD872DED8909073DE77A75
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2897D147DDFC3B1AC15675BB43AA7096EB491277
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2B2B2D153CD58762F584A213CD8D3EB2CBD872B0
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/25F9ED28A38894C7777DB9426037333DA20F9259
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2AC1A4216B43643059BDA4FDD4C969A4518844B0
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2275F9569F28969C8FC69F9660A75ADD1F8B963B
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/25CB486273A861CB40459328715928E0DCC3615F
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2D657128D83916C0BBFBA3BC534493792CC45D71
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/205521387F3DCCA94349AE287E015FBD756EBB81
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/29AF74577EB875179F6E85228F5CB6EF5A47802B
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2D00CA8CE6BED9FDBBDE29012C9BC4A731B22232
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/22E60B73C813149E64A2B6B56AB81D65985D56EB
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/252CE8AC445A184A1F4A1C6C6D4ADB8AE41B7776
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/225DB6D136144102BEBF8D999082D58148570B22
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/26B7A89B14D1DA063E3364AFBFEFF84DBDD1CCE3
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/25B620FE2E83985F1C64BB2ADAE0C7FD794B2A91
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2FB5B6D924046DD886E6CA1E0BC4735240D958DD
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/249C0EBA30BE97EE15F9BE751A4FC33939E1AA5D
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2B67F3D7D8EB34357D5A51CE3E6428F5E9BAE8C1
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2F05D0D72060F7E89E88B58FEDD543896330035A
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2DD40C857DF281854F76B1734042AE61F783B5EC
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/24E5BCF2ECC31A23692732D61C38FD4288AD5579
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/29F375C11DA1CE9896011DBE24AA9BAB7169F94E
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/205C5B1E509DD204D1C9A416B0B93481C6B1BC93
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2AB75EDCB165F0A678CD509A9F7B6C90972156FA
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2ECE7EEAF52A145ACFCF971FF295B78EB1AAA708
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2269703B7EB78378CDBC7831C10902B6CE460031
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/253AA0937F1B366DFF170B065E055C5BA6FC0FBC
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2CEC0EAF0FC43CDD28F52C2DBC213DB32D14D517
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/258399C2B9CFA3921027A1F04941F666791343F6
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2D5BA9B5FD4E78ECDFDB82B5F7C9F477B22697F0
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2228D3EEAADDE91D47EF447CC9CEAE52FF003F69
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/29B3B9AD11EA1C0184DD9B7F825DAE772202228A
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/276B12C1968B6B9B08CB1F5FC07536705B4A28CF
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2584EAB7B1C7F673A6BC544273B576F3C6AD04E2
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/254256B27E0C48CF9B80B695F0B3B8CA84610495
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/283692340D4E6C6869C73F301FD64DC2ADD488DD
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/296FC2ACBDDCB3C834DBC776DBF197A05D0AD675
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/29008D728ECE9AE6E0DE79EACF41DFE467C35700
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/23E21982FED4A67F409D4754802999CDA6A2A5FF
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2B8DB5289EFF0A466C21F47412A322A36CEB5044
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/219BC391DDE433A74A1EA58B0A6FD34BBD6EA127
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2DB70BF89F32C63605EC731B028F0B5937A6C251
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2FA06FF074BBF669B138972E8A0594962850D7EE
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2D79B4C8B42E88893C8539D3270EBD2132E3536D
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2F12BA4FBB3CBC67BD68B9083B5DDF6FD95A9A2C
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/240374942E744AD48A9C2E99E26437B65EB47320
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/299342193A337E8AF32D247C8CCE9B140D3C267A
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/20E7CE4966D1B87CE608960206ED8E9160BFAAD3
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2F96CF62FFD5A4045BB4864C3FE81A3D19EB30F4
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2CB84DD9ABB4E1485D83397C59B193094E1ABFC7
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2D788B71BCB582F1F068AD87A406E55C34F1EBBD
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2C895827730CC563B764413DFD565B901E1D6CB7
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2DBBFAE43B087A424BC5B3BD5BBCE20B2D3ED25A
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2FCF10CC6A2C50FCFD40C727C321B0027D547DD7
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/220A7A7B1CFCC418F0C4A57A2682F78412B1DD48
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2AEF1E8D8D12D757CA0B5F5AF434A8AF568538A4
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/23EC873489C253CC38CC03B2695BC5EDD8CAD481
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/2A346EAE9650433CE49BBB60685DE753A924FD3C
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/21A0F85416DB43E51F226C62D482A0CD7758DB11
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/290694D2A0A7147121D5578F8C0E765DF1B55DFA
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/270C541FE0E8563F2AD606D644D8947188368ECA
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/23EE82B22B5D797E9CE3C3B09A167CF700651730
+./.cache/mozilla/firefox/njtpsokg.default-release/cache2/entries/29BD4DA6D748266FD1F7C4275352FAAF63FE84AC
+./.cache/mesa_shader_cache/4b/2373622323205b7960649614728e5147507d67
+./.cache/mesa_shader_cache/a9/2cca74acc320faf4a55ec11fc45f360ae1bdb0
+./.cache/mesa_shader_cache/50/2c0f1ae312bb58e052623492783020050f1ec8
+./.cache/mesa_shader_cache/20
+./.cache/mesa_shader_cache/86/2aa04b39b72465b93f465db867a79b0b358caf
+./.cache/mesa_shader_cache/2a
+./.cache/mesa_shader_cache/21
+./.cache/mesa_shader_cache/2d
+./.cache/mesa_shader_cache/ae/20a1b6ab4976340c806ed471bb01dcc5c14757
+./.cache/mesa_shader_cache/1b/2900d6249dc72e6a8a67f23dadead5bfdf5686
+./.cache/mesa_shader_cache/28
+./.cache/mesa_shader_cache/e3/2d2bb9dc0ff73702b16814cdacb6a662b42b71
+./.cache/mesa_shader_cache/57/23f27c043897b5096bf1787086268fd024bc15
+./.cache/mesa_shader_cache/e2/22ca4a1ea7d6a84dc78e1bde7b66d501b437f6
+./.cache/mesa_shader_cache/fd/25e1de940a2dd94b200e3e1a31aed243864645
+./.cache/mesa_shader_cache/2b
+./.cache/mesa_shader_cache/2b/26c70856ccc3ab2fa95cbdc2cd5971a5428863
+./.cache/mesa_shader_cache/2b/2980302e49d0283562c8d70c5e9c027aa5ef3c
+./.mozilla/firefox/njtpsokg.default-release/datareporting/archived/2023-01
+./.mozilla/firefox/njtpsokg.default-release/storage/permanent/chrome/idb/2918063365piupsah.files
+./.mozilla/firefox/njtpsokg.default-release/storage/permanent/chrome/idb/2823318777ntouromlalnodry--naod.files
+./.mozilla/firefox/njtpsokg.default-release/storage/permanent/chrome/idb/2823318777ntouromlalnodry--naod.sqlite
+./.mozilla/firefox/njtpsokg.default-release/storage/permanent/chrome/idb/2918063365piupsah.sqlite
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++learnermanipal.sharepoint.com^partitionKey=%28https%2Cmicrosoft.com%29/cache/morgue/204
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++learnermanipal.sharepoint.com^partitionKey=%28https%2Cmicrosoft.com%29/cache/morgue/213
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++learnermanipal.sharepoint.com^partitionKey=%28https%2Cmicrosoft.com%29/cache/morgue/215
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++learnermanipal.sharepoint.com^partitionKey=%28https%2Cmicrosoft.com%29/cache/morgue/245
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++learnermanipal.sharepoint.com^partitionKey=%28https%2Cmicrosoft.com%29/cache/morgue/207
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++learnermanipal.sharepoint.com^partitionKey=%28https%2Cmicrosoft.com%29/cache/morgue/226
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++learnermanipal.sharepoint.com^partitionKey=%28https%2Cmicrosoft.com%29/cache/morgue/202
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++learnermanipal.sharepoint.com^partitionKey=%28https%2Cmicrosoft.com%29/cache/morgue/20
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++learnermanipal.sharepoint.com^partitionKey=%28https%2Cmicrosoft.com%29/cache/morgue/222
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++learnermanipal.sharepoint.com^partitionKey=%28https%2Cmicrosoft.com%29/cache/morgue/242
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++learnermanipal.sharepoint.com^partitionKey=%28https%2Cmicrosoft.com%29/cache/morgue/238
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++learnermanipal.sharepoint.com^partitionKey=%28https%2Cmicrosoft.com%29/cache/morgue/230
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++learnermanipal.sharepoint.com^partitionKey=%28https%2Cmicrosoft.com%29/cache/morgue/223
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++learnermanipal.sharepoint.com^partitionKey=%28https%2Cmicrosoft.com%29/cache/morgue/23
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++learnermanipal.sharepoint.com^partitionKey=%28https%2Cmicrosoft.com%29/cache/morgue/232
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++learnermanipal.sharepoint.com^partitionKey=%28https%2Cmicrosoft.com%29/cache/morgue/26
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++learnermanipal.sharepoint.com^partitionKey=%28https%2Cmicrosoft.com%29/cache/morgue/248
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++learnermanipal.sharepoint.com^partitionKey=%28https%2Cmicrosoft.com%29/cache/morgue/211
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++learnermanipal.sharepoint.com^partitionKey=%28https%2Cmicrosoft.com%29/cache/morgue/239
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++learnermanipal.sharepoint.com^partitionKey=%28https%2Cmicrosoft.com%29/cache/morgue/219
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++learnermanipal.sharepoint.com^partitionKey=%28https%2Cmicrosoft.com%29/cache/morgue/21
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++learnermanipal.sharepoint.com^partitionKey=%28https%2Cmicrosoft.com%29/cache/morgue/236
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++learnermanipal.sharepoint.com^partitionKey=%28https%2Cmicrosoft.com%29/cache/morgue/22
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++learnermanipal.sharepoint.com^partitionKey=%28https%2Cmicrosoft.com%29/cache/morgue/253
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++learnermanipal.sharepoint.com^partitionKey=%28https%2Cmicrosoft.com%29/cache/morgue/27
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++learnermanipal.sharepoint.com^partitionKey=%28https%2Cmicrosoft.com%29/cache/morgue/254
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++learnermanipal.sharepoint.com^partitionKey=%28https%2Cmicrosoft.com%29/cache/morgue/241
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++learnermanipal.sharepoint.com^partitionKey=%28https%2Cmicrosoft.com%29/cache/morgue/244
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++learnermanipal.sharepoint.com^partitionKey=%28https%2Cmicrosoft.com%29/cache/morgue/237
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++learnermanipal.sharepoint.com^partitionKey=%28https%2Cmicrosoft.com%29/cache/morgue/217
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++learnermanipal.sharepoint.com^partitionKey=%28https%2Cmicrosoft.com%29/cache/morgue/249
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++learnermanipal.sharepoint.com^partitionKey=%28https%2Cmicrosoft.com%29/cache/morgue/212
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++learnermanipal.sharepoint.com^partitionKey=%28https%2Cmicrosoft.com%29/cache/morgue/247
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++learnermanipal.sharepoint.com^partitionKey=%28https%2Cmicrosoft.com%29/cache/morgue/28
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++learnermanipal.sharepoint.com^partitionKey=%28https%2Cmicrosoft.com%29/cache/morgue/252
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++learnermanipal.sharepoint.com^partitionKey=%28https%2Cmicrosoft.com%29/cache/morgue/25
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++learnermanipal.sharepoint.com^partitionKey=%28https%2Cmicrosoft.com%29/cache/morgue/2
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++learnermanipal.sharepoint.com^partitionKey=%28https%2Cmicrosoft.com%29/cache/morgue/209
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++learnermanipal.sharepoint.com^partitionKey=%28https%2Cmicrosoft.com%29/cache/morgue/24
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++learnermanipal.sharepoint.com^partitionKey=%28https%2Cmicrosoft.com%29/cache/morgue/205
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++learnermanipal.sharepoint.com^partitionKey=%28https%2Cmicrosoft.com%29/cache/morgue/218
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++learnermanipal.sharepoint.com^partitionKey=%28https%2Cmicrosoft.com%29/cache/morgue/240
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++learnermanipal.sharepoint.com^partitionKey=%28https%2Cmicrosoft.com%29/cache/morgue/214
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++learnermanipal.sharepoint.com^partitionKey=%28https%2Cmicrosoft.com%29/idb/292949795Rgoiuftneo.C.files
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++learnermanipal.sharepoint.com^partitionKey=%28https%2Cmicrosoft.com%29/idb/292949795Rgoiuftneo.C.sqlite
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++teams.microsoft.com/cache/morgue/208
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++teams.microsoft.com/cache/morgue/202
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++teams.microsoft.com/cache/morgue/206
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++teams.microsoft.com/cache/morgue/232
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++teams.microsoft.com/cache/morgue/219
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++teams.microsoft.com/cache/morgue/200
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++teams.microsoft.com/cache/morgue/253
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++teams.microsoft.com/cache/morgue/235
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++teams.microsoft.com/cache/morgue/201
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++teams.microsoft.com/cache/morgue/254
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++teams.microsoft.com/cache/morgue/225
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++teams.microsoft.com/cache/morgue/252
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++teams.microsoft.com/cache/morgue/25
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++teams.microsoft.com/cache/morgue/2
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++teams.microsoft.com/cache/morgue/209
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++teams.microsoft.com/cache/morgue/24
+./.mozilla/firefox/njtpsokg.default-release/storage/default/https+++teams.microsoft.com/cache/morgue/233
+./Desktop/210911310
+./210911310
+STUDENT1@MIT-ICT-LAB8-10:~$ find . -name "T*"
+./Templates
+./.local/share/Trash
+STUDENT1@MIT-ICT-LAB8-10:~$ head -n 20 lab1
+head: cannot open 'lab1' for reading: No such file or directory
+STUDENT1@MIT-ICT-LAB8-10:~$ head -n 20 lab1.txt
+head: cannot open 'lab1.txt' for reading: No such file or directory
+STUDENT1@MIT-ICT-LAB8-10:~$ cd 210911310
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ ^C
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ head -n 20 lab1
+STUDENT1@MIT-ICT-LAB8-10:~$ date
+Monday 30 January 2023 02:11:09 PM IST
+STUDENT1@MIT-ICT-LAB8-10:~$ ls
+Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+STUDENT1@MIT-ICT-LAB8-10:~$ man ls
+STUDENT1@MIT-ICT-LAB8-10:~$ ls -l
+total 32
+drwx------ 3 STUDENT1 STUDENT1 4096 Jan 30 10:26 Desktop
+drwx------ 2 STUDENT1 STUDENT1 4096 Dec 15 12:38 Documents
+drwx------ 2 STUDENT1 STUDENT1 4096 Jan 30 09:53 Downloads
+drwx------ 2 STUDENT1 STUDENT1 4096 Dec 15 12:38 Music
+drwx------ 2 STUDENT1 STUDENT1 4096 Dec 15 12:38 Pictures
+drwx------ 2 STUDENT1 STUDENT1 4096 Dec 15 12:38 Public
+drwx------ 2 STUDENT1 STUDENT1 4096 Dec 15 12:38 Templates
+drwx------ 2 STUDENT1 STUDENT1 4096 Dec 15 12:38 Videos
+STUDENT1@MIT-ICT-LAB8-10:~$ ls -al
+total 80
+drwx------ 16 STUDENT1 STUDENT1 4096 Jan 30 11:30 .
+drwxr-xr-x 12 root     root     4096 Dec 15 12:35 ..
+-rw-------  1 STUDENT1 STUDENT1  112 Jan 30 11:30 .bash_history
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ tail -n 20 lab1
+Documents:   directory
+Downloads:   directory
+file.txt:    ASCII text
+Music:       directory
+newfile.txt: empty
+newtext.txt: ASCII text
+Pictures:    directory
+Public:      directory
+Templates:   directory
+Videos:      directory
+STUDENT1@MIT-ICT-LAB8-10:~$ mkdir 210911310
+STUDENT1@MIT-ICT-LAB8-10:~$ cd 210911310
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ rmdir 210911310
+rmdir: failed to remove '210911310': No such file or directory
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ cd ..
+STUDENT1@MIT-ICT-LAB8-10:~$ pwd
+/home/STUDENT1
+STUDENT1@MIT-ICT-LAB8-10:~$ cd 210911310
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ rm -Rf 210911310
+
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ tail -n 1 newtext.txt
+this is my first lab
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ head -n 1 file.txt
+hi
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ head -n 100 lab1
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ cd ..
+STUDENT1@MIT-ICT-LAB8-10:~$ rmdir 210911310
+rmdir: failed to remove '210911310': Directory not empty
+STUDENT1@MIT-ICT-LAB8-10:~$ mkdir test
+STUDENT1@MIT-ICT-LAB8-10:~$ rmdir test
+STUDENT1@MIT-ICT-LAB8-10:~$ cd 210911310
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ mkdit try
+
+Command 'mkdit' not found, did you mean:
+
+  command 'mkdic' from deb canna-utils (3.7p3-14)
+  command 'mkdist' from deb libmodule-package-rdf-perl (0.014-1)
+  command 'mkdir' from deb coreutils (8.30-3ubuntu2)
+
+Try: apt install <deb name>
+
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ mkdir try
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ cd try
+STUDENT1@MIT-ICT-LAB8-10:~/210911310/try$ touch abc.txt
+STUDENT1@MIT-ICT-LAB8-10:~/210911310/try$ cd ..
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ rmdir try
+rmdir: failed to remove 'try': Directory not empty
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ rm -rF try
+rm: invalid option -- 'F'
+Try 'rm --help' for more information.
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ rm -Rf try
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ man ls
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ cd/usr/bin
+bash: cd/usr/bin: No such file or directory
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ cd usr/bin
+bash: cd: usr/bin: No such file or directory
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ cd /usr/bin
+STUDENT1@MIT-ICT-LAB8-10:/usr/bin$ ls
+'['                                   mpiexec.openmpi
+ 2to3-2.7                             mpif77
+ 411toppm                             mpif77.openmpi
+ a2ping                               mpif90
+ a5toa4                               mpif90.openmpi
+ aa-enabled                           mpifort
+ aa-exec                              mpifort.openmpi
+ aclocal                              mpirun
+ aclocal-1.16                         mpirun.openmpi
+ aconnect                             mpost
+ acpi_listen                          mptopdf
+ acyclic                              mrd
+ add-apt-repository                   mren
+ addpart                              mscompress
+ addr2line                            msexpand
+ adhocfilelist                        mshortname
+ afm2afm                              mshowfat
+ afm2pl                               ms_print
+ afm2tfm                              msxlint
+ aleph                                mt
+ allcm                                mt-gnu
+ allec                                mtools
+ allneeded                            mtoolstest
+ alsabat                              mtr
+ alsaloop                             mtrace
+ alsamixer                            mtr-packet
+ alsatplg                             mtvtoppm
+ alsaucm                              mtype
+ amidi                                mutter
+ amixer                               mv
+ amuFormat.sh                         mxtar
+ animate                              mzip
+ animate-im6                          namei
+ animate-im6.q16                      nano
+ anytopnm                             nautilus
+ apg                                  nautilus-autorun-software
+ apgbfm                               nautilus-sendto
+ aplay                                nawk
+ aplaymidi                            nc
+ apport-bug                           ncal
+ apport-cli                           nc.openbsd
+ apport-collect                       ncurses5-config
+ apport-unpack                        ncurses6-config
+ appres                               ncursesw5-config
+ appstreamcli                         ncursesw6-config
+ apropos                              neato
+ apt                                  neotoppm
+ apt-add-repository                   neqn
+ apt-cache                            netcat
+ apt-cdrom                            netkit-ftp
+ apt-config                           networkctl
+ aptdcon                              networkd-dispatcher
+ apt-extracttemplates                 newgidmap
+ apt-ftparchive                       newgrp
+ apt-get                              newuidmap
+ apt-key                              ngettext
+ apt-mark                             nice
+ apt-sortpkgs                         nisdomainname
+ apturl                               nl
+ apturl-gtk                           nm
+ ar                                   nm-applet
+ arara                                nmcli
+ arch                                 nm-connection-editor
+ arecord                              nm-online
+ arecordmidi                          nmtui
+ arlatex                              nmtui-connect
+ arm2hpdl                             nmtui-edit
+ as                                   nmtui-hostname
+ asciitopgm                           nohup
+ aseqdump                             nop
+ aseqnet                              notify-send
+ aspell                               nproc
+ aspell-import                        nroff
+ assistant                            nsenter
+ atktopbm                             nslookup
+ atobm                                nstat
+ authorindex                          nsupdate
+ autoconf                             ntfs-3g
+ autoheader                           ntfs-3g.probe
+ autoinst                             ntfscat
+ autom4te                             ntfscluster
+ automake                             ntfscmp
+ automake-1.16                        ntfsdecrypt
+ autoreconf                           ntfsfallocate
+ autoscan                             ntfsfix
+ autosp                               ntfsinfo
+ autoupdate                           ntfsls
+ avahi-browse                         ntfsmove
+ avahi-browse-domains                 ntfsrecover
+ avahi-publish                        ntfssecaudit
+ avahi-publish-address                ntfstruncate
+ avahi-publish-service                ntfsusermap
+ avahi-resolve                        ntfswipe
+ avahi-resolve-address                numfmt
+ avahi-resolve-host-name              nvidia-detector
+ avahi-set-host-name                  oakdecode
+ awk                                  obexctl
+ axfer                                obj2yaml-6.0
+ axohelp                              objcopy
+ b2sum                                objdump
+ baobab                               oclock
+ base32                               od
+ base64                               odvicopy
+ basename                             odvitype
+ bash                                 oem-getlogs
+ bashbug                              ofm2opl
+ bbox                                 omfonts
+ bc                                   ompi-clean
+ bccmd                                ompi_info
+ bcomps                               ompi-server
+ bdftopcf                             on_ac_power
+ bdftruncate                          opalc++
+ bibtex                               opalcc
+ bibtex8                              opal_wrapper
+ bibtex.original                      openssl
+ bibtexu                              openvt
+ bioradtopgm                          opl2ofm
+ bitmap                               opldecode
+ bluemoon                             opt-6.0
+ bluetoothctl                         orca
+ bluetooth-sendto                     orca-dm-wrapper
+ bmptopnm                             orte-clean
+ bmptoppm                             orted
+ bmtoa                                orterun
+ boltctl                              orte-server
+ bootctl                              osage
+ brltty                               os-prober
+ brltty-ctb                           ot2kpx
+ brltty-trtxt                         otangle
+ brltty-ttb                           otp2ocp
+ broadwayd                            outocp
+ browse                               ovf2ovp
+ brushtopbm                           ovp2ovf
+ brz                                  p11-kit
+ bsd-from                             pacat
+ bsd-write                            pacmd
+ btattach                             pactl
+ btmgmt                               padsp
+ btmon                                pager
+ bugpoint-6.0                         pa-info
+ bundle2.7                            palmtopnm
+ bundledoc                            pamcut
+ bundler2.7                           pamdeinterlace
+ bunzip2                              pamdice
+ busctl                               pamfile
+ busybox                              pamoil
+ bwrap                                pamon
+ bzcat                                pamphletangler
+ bzcmp                                pamstack
+ bzdiff                               pamstretch
+ bzegrep                              pamstretch-gen
+ bzexe                                pango-list
+ bzfgrep                              pango-view
+ bzgrep                               paperconf
+ bzip2                                paplay
+ bzip2recover                         parec
+ bzless                               parecord
+ bzmore                               partx
+ bzr                                  passwd
+ c++                                  paste
+ c89                                  pasteurize
+ c89-gcc                              pasuspender
+ c99                                  patch
+ c99-gcc                              patchwork
+ cachepic                             patgen
+ cal                                  pathchk
+ calendar                             pax11publish
+ calibrate_ppa                        pbibtex
+ callgrind_annotate                   pbmclean
+ callgrind_control                    pbmlife
+ canberra-gtk-play                    pbmmake
+ cancel                               pbmmask
+ captoinfo                            pbmpage
+ cat                                  pbmpscale
+ catchsegv                            pbmreduce
+ catman                               pbmtext
+ cautious-launcher                    pbmtextps
+ cb_console_runner                    pbmto10x
+ cb_share_config                      pbmtoascii
+ cc                                   pbmtoatk
+ ccomps                               pbmtobbnbg
+ cd-create-profile                    pbmtocmuwm
+ cd-fix-profile                       pbmtoepsi
+ cd-iccdump                           pbmtoepson
+ cd-it8                               pbmtog3
+ c++filt                              pbmtogem
+ cg_annotate                          pbmtogo
+ cg_diff                              pbmtoicon
+ cg_merge                             pbmtolj
+ chacl                                pbmtomacp
+ chage                                pbmtomda
+ chardet3                             pbmtomgr
+ chardetect3                          pbmtonokia
+ chattr                               pbmtopgm
+ chcon                                pbmtopi3
+ check-language-support               pbmtoplot
+ checklistings                        pbmtoppa
+ cheese                               pbmtopsg3
+ chfn                                 pbmtoptx
+ chgrp                                pbmtowbmp
+ chkdvifont                           pbmtox10bm
+ chklref                              pbmtoxbm
+ chmod                                pbmtoybm
+ choom                                pbmtozinc
+ chown                                pbmupc
+ chrt                                 pcre2-config
+ chsh                                 pcre-config
+ chvt                                 pcxtoppm
+ ciptool                              pdb2
+ circo                                pdb2.7
+ ckbcomp                              pdb3
+ cksum                                pdb3.8
+ clear                                pdf2dsc
+ clear_console                        pdf2ps
+ cluster                              pdfannotextractor
+ cluttex                              pdfatfi
+ cmake                                pdfattach
+ cmp                                  pdfbook2
+ cmuwmtopbm                           pdfclose
+ codeblocks                           pdfcrop
+ codepage                             pdfdetach
+ col                                  pdfetex
+ colcrt                               pdffonts
+ colormgr                             pdfimages
+ colrm                                pdfinfo
+ column                               pdfjam
+ comm                                 pdflatex
+ compare                              pdflatex-dev
+ compare-im6                          pdflatexpicscale
+ compare-im6.q16                      pdfopen
+ compose                              pdfseparate
+ composite                            pdfsig
+ composite-im6                        pdftex
+ composite-im6.q16                    pdftex-quiet
+ conjure                              pdftocairo
+ conjure-im6                          pdftohtml
+ conjure-im6.q16                      pdftoppm
+ convert                              pdftops
+ convert-im6                          pdftosrc
+ convert-im6.q16                      pdftotext
+ corelist                             pdfunite
+ cp                                   pdfxup
+ cpack                                pdvitomp
+ cpan                                 pdvitype
+ cpan5.30-x86_64-linux-gnu            peekfd
+ cpio                                 perl
+ cpp                                  perl5.30.0
+ cpp-8                                perl5.30-x86_64-linux-gnu
+ cpp-9                                perlbug
+ c_rehash                             perldoc
+ crontab                              perli11ndoc
+ csplit                               perlivp
+ ctanbib                              perltex
+ ctangle                              perlthanks
+ ctanify                              pf2afm
+ ctan-o-mat                           pfarrei
+ ctanupload                           pfb2pfa
+ ctest                                pfbtopfa
+ ctie                                 pftp
+ ctstat                               pgmbentley
+ ctwill                               pgmcrater
+ ctwill-refsort                       pgmedge
+ ctwill-twinx                         pgmenhance
+ cupstestppd                          pgmhist
+ cut                                  pgmkernel
+ cvs                                  pgmnoise
+ cvs-switchroot                       pgmnorm
+ cvt                                  pgmoil
+ cvtsudoers                           pgmramp
+ cweave                               pgmslice
+ dash                                 pgmtexture
+ date                                 pgmtofs
+ dbus-cleanup-sockets                 pgmtolispm
+ dbus-daemon                          pgmtopbm
+ dbus-launch                          pgmtoppm
+ dbus-monitor                         pgrep
+ dbus-run-session                     pi1toppm
+ dbus-send                            pi3topbm
+ dbus-update-activation-environment   pic
+ dbus-uuidgen                         pico
+ dbxtool                              piconv
+ dc                                   pidof
+ dconf                                pinentry
+ dd                                   pinentry-curses
+ ddstdecode                           pinentry-gnome3
+ deallocvt                            pinentry-x11
+ debconf                              ping
+ debconf-apt-progress                 ping4
+ debconf-communicate                  ping6
+ debconf-copydb                       pinky
+ debconf-escape                       pip
+ debconf-set-selections               pip3
+ debconf-show                         pixeltool
+ debian-distro-info                   pjtoppm
+ deb-systemd-helper                   pk2bm
+ deb-systemd-invoke                   pkaction
+ deja-dup                             pkcheck
+ delaunay                             pkcon
+ delpart                              pkexec
+ delv                                 pkfix
+ depythontex                          pkfix-helper
+ derb                                 pkg-config
+ designer                             pkgdata
+ desktop-file-edit                    pkill
+ desktop-file-install                 pkmon
+ desktop-file-validate                pktogf
+ detex                                pkttyagent
+ devdump                              pktype
+ devnag                               pl2pm
+ df                                   pldd
+ dfu-tool                             plog
+ dh_autotools-dev_restoreconfig       pltotf
+ dh_autotools-dev_updateconfig        plymouth
+ dh_bash-completion                   pmap
+ dh_doxygen                           pmpost
+ dh_installtex                        pmxab
+ dh_installxmlcatalogs                pn2pdf
+ dh_perl_openssl                      pngfix
+ dh_python2                           png-fix-itxt
+ dh_sphinxdoc                         pngtopnm
+ dia                                  pnm2ppa
+ dialog                               pnmalias
+ diff                                 pnmarith
+ diff3                                pnmcat
+ diffimg                              pnmcolormap
+ dig                                  pnmcomp
+ dijkstra                             pnmconvol
+ dir                                  pnmcrop
+ dircolors                            pnmcut
+ dirmngr                              pnmdepth
+ dirmngr-client                       pnmenlarge
+ dirname                              pnmfile
+ dirsplit                             pnmflip
+ disdvi                               pnmgamma
+ display                              pnmhisteq
+ display-im6                          pnmhistmap
+ display-im6.q16                      pnmindex
+ distro-info                          pnminterp
+ dmesg                                pnminterp-gen
+ dnsdomainname                        pnminvert
+ domainname                           pnmmargin
+ do-release-upgrade                   pnmmontage
+ dosepsbin                            pnmnlfilt
+ dot                                  pnmnoraw
+ dot2gxl                              pnmnorm
+ dot_builtins                         pnmpad
+ dotty                                pnmpaste
+ doxygen                              pnmpsnr
+ doxyindexer                          pnmquant
+ doxysearch.cgi                       pnmremap
+ dpkg                                 pnmrotate
+ dpkg-architecture                    pnmscale
+ dpkg-buildflags                      pnmscalefixed
+ dpkg-buildpackage                    pnmshear
+ dpkg-checkbuilddeps                  pnmsmooth
+ dpkg-deb                             pnmsplit
+ dpkg-distaddfile                     pnmtile
+ dpkg-divert                          pnmtoddif
+ dpkg-genbuildinfo                    pnmtofiasco
+ dpkg-genchanges                      pnmtofits
+ dpkg-gencontrol                      pnmtojpeg
+ dpkg-gensymbols                      pnmtopalm
+ dpkg-maintscript-helper              pnmtoplainpnm
+ dpkg-mergechangelogs                 pnmtopng
+ dpkg-name                            pnmtops
+ dpkg-parsechangelog                  pnmtorast
+ dpkg-query                           pnmtorle
+ dpkg-scanpackages                    pnmtosgi
+ dpkg-scansources                     pnmtosir
+ dpkg-shlibdeps                       pnmtotiff
+ dpkg-source                          pnmtotiffcmyk
+ dpkg-split                           pnmtoxwd
+ dpkg-statoverride                    pod2html
+ dpkg-trigger                         pod2man
+ dpkg-vendor                          pod2text
+ driverless                           pod2usage
+ dt2dv                                podchecker
+ dtxgen                               podselect
+ du                                   poff
+ dumpkeys                             pon
+ duplicity                            pooltype
+ dv2dt                                POST
+ dvi2fax                              ppdc
+ dvi2tty                              ppdhtml
+ dviasm                               ppdi
+ dvibook                              ppdmerge
+ dviconcat                            ppdpo
+ dvicopy                              pphs
+ dvigif                               ppltotf
+ dvihp                                ppm3d
+ dviinfox                             ppmbrighten
+ dvilj                                ppmchange
+ dvilj2p                              ppmcie
+ dvilj4                               ppmcolormask
+ dvilj4l                              ppmcolors
+ dvilj6                               ppmdim
+ dvilualatex                          ppmdist
+ dvilualatex-dev                      ppmdither
+ dviluatex                            ppmfade
+ dvipdf                               ppmflash
+ dvipdfm                              ppmforge
+ dvipdfmx                             ppmhist
+ dvipdft                              ppmlabel
+ dvipng                               ppmmake
+ dvipos                               ppmmix
+ dvips                                ppmnorm
+ dvired                               ppmntsc
+ dviselect                            ppmpat
+ dvispc                               ppmquant
+ dvisvgm                              ppmquantall
+ dvitodvi                             ppmqvga
+ dvitomp                              ppmrainbow
+ dvitype                              ppmrelief
+ dwp                                  ppmshadow
+ e2pall                               ppmshift
+ ebb                                  ppmspread
+ echo                                 ppmtoacad
+ ed                                   ppmtobmp
+ edgepaint                            ppmtoeyuv
+ edit                                 ppmtogif
+ editor                               ppmtoicr
+ editres                              ppmtoilbm
+ efibootdump                          ppmtojpeg
+ efibootmgr                           ppmtoleaf
+ egrep                                ppmtolj
+ eject                                ppmtomap
+ elfedit                              ppmtomitsu
+ enc2xs                               ppmtompeg
+ encguess                             ppmtoneo
+ enchant-2                            ppmtopcx
+ enchant-lsmod-2                      ppmtopgm
+ env                                  ppmtopi1
+ envsubst                             ppmtopict
+ eog                                  ppmtopj
+ eps2eps                              ppmtopuzz
+ epspdf                               ppmtorgb3
+ epspdftk                             ppmtosixel
+ epstopdf                             ppmtotga
+ eptex                                ppmtouil
+ eqn                                  ppmtowinicon
+ erb                                  ppmtoxpm
+ erb2.7                               ppmtoyuv
+ esc-m                                ppmtoyuvsplit
+ etex                                 ppmtv
+ euptex                               pr
+ eutp                                 precat
+ evince                               preconv
+ evince-previewer                     prepmx
+ evince-thumbnailer                   preunzip
+ ex                                   prezip
+ exceltex                             prezip-bin
+ expand                               print
+ expiry                               printafm
+ expr                                 printenv
+ extractbb                            printerbanner
+ eyuvtoppm                            printer-profile
+ f77                                  printf
+ f95                                  prlimit
+ factor                               prove
+ faillog                              prtstat
+ faked-sysv                           prune
+ faked-tcp                            ps
+ fakeroot                             ps2ascii
+ fakeroot-sysv                        ps2eps
+ fakeroot-tcp                         ps2epsi
+ fallocate                            ps2frag
+ false                                ps2pdf
+ fc-cache                             ps2pdf12
+ fc-cat                               ps2pdf13
+ fc-conflist                          ps2pdf14
+ fc-list                              ps2pdfwr
+ fc-match                             ps2pk
+ fc-pattern                           ps2ps
+ fc-query                             ps2ps2
+ fc-scan                              ps2txt
+ fc-validate                          psfaddtable
+ fdp                                  psfgettable
+ fgconsole                            psfstriptable
+ fgrep                                psfxtable
+ fiascotopnm                          psicc
+ fig4latex                            psidtopgm
+ file                                 pslatex
+ file2brl                             pslog
+ file-roller                          pstopnm
+ fincore                              pstree
+ find                                 pstree.x11
+ findhyph                             ptar
+ findmnt                              ptardiff
+ firefox                              ptargrep
+ fitstopnm                            ptex
+ flock                                ptftopl
+ fmt                                  ptx
+ fmtutil                              pulseaudio
+ fmtutil-sys                          pwd
+ fmtutil-user                         pwdx
+ fold                                 py3clean
+ fontinst                             py3compile
+ fonttosfnt                           py3versions
+ foo2ddst                             pybabel
+ foo2ddst-wrapper                     pybabel-python3
+ foo2hbpl2                            pyclean
+ foo2hbpl2-wrapper                    pycompile
+ foo2hiperc                           pydoc2
+ foo2hiperc-wrapper                   pydoc2.7
+ foo2hp                               pydoc3
+ foo2hp2600-wrapper                   pydoc3.8
+ foo2lava                             pygettext2
+ foo2lava-wrapper                     pygettext2.7
+ foo2oak                              pygettext3
+ foo2oak-wrapper                      pygettext3.8
+ foo2qpdl                             pygmentize
+ foo2qpdl-wrapper                     pyjwt3
+ foo2slx                              python2
+ foo2slx-wrapper                      python2.7
+ foo2xqx                              python3
+ foo2xqx-wrapper                      python3.8
+ foo2zjs                              python3.8-config
+ foo2zjs-icc2ps                       python3-config
+ foo2zjs-pstops                       python3-futurize
+ foo2zjs-wrapper                      python3-pasteurize
+ foomatic-rip                         pythontex
+ fprintd-delete                       pyversions
+ fprintd-enroll                       qcollectiongenerator
+ fprintd-list                         qdbus
+ fprintd-verify                       qdbuscpp2xml
+ free                                 qdbusviewer
+ from                                 qdbusxml2cpp
+ fstopgm                              qdoc
+ ftp                                  qdoc3
+ funzip                               qgltf
+ fuser                                qhelpconverter
+ fusermount                           qhelpgenerator
+ futurize                             qlalr
+ fwupdagent                           qmake
+ fwupdate                             qml
+ fwupdmgr                             qml1plugindump
+ fwupdtool                            qmlbundle
+ g++                                  qmlcachegen
+ g3topbm                              qmleasing
+ g++-9                                qmlimportscanner
+ gamemoded                            qmljs
+ gamemoderun                          qmllint
+ gamma4scanimage                      qmlmin
+ gapplication                         qmlplugindump
+ gatttool                             qmlprofiler
+ gc                                   qmlscene
+ gcalccmd                             qmltestrunner
+ gcc                                  qmlviewer
+ gcc-8                                qpdldecode
+ gcc-9                                qrttoppm
+ gcc-ar                               qtattributionsscanner
+ gcc-ar-8                             qtchooser
+ gcc-ar-9                             qtconfig
+ gcc-nm                               qtdiag
+ gcc-nm-8                             qtpaths
+ gcc-nm-9                             qtplugininfo
+ gcc-ranlib                           quirks-handler
+ gcc-ranlib-8                         qvkgen
+ gcc-ranlib-9                         racc2.7
+ gcore                                racc2y2.7
+ gcov                                 rake
+ gcov-8                               ranlib
+ gcov-9                               rasttopnm
+ gcov-dump                            rawtopgm
+ gcov-dump-8                          rawtoppm
+ gcov-dump-9                          rbash
+ gcov-tool                            rcc
+ gcov-tool-8                          rcp
+ gcov-tool-9                          rctest
+ gcr-viewer                           rdiffdir
+ gdb                                  rdma
+ gdb-add-index                        rdoc
+ gdbserver                            rdoc2.7
+ gdbtui                               readelf
+ gdbus                                readlink
+ gdbus-codegen                        realpath
+ gdialog                              red
+ gdk-pixbuf-csource                   remmina
+ gdk-pixbuf-pixdata                   remmina-file-wrapper
+ gdk-pixbuf-thumbnailer               remmina-gnome
+ gdmflexiserver                       rename.ul
+ gdm-screenshot                       rendercheck
+ gedit                                renice
+ gem                                  repc
+ gem2.7                               repstopdf
+ gemtopbm                             reset
+ gemtopnm                             resize
+ genbrk                               resizecons
+ gencat                               resizepart
+ gencfu                               resolvectl
+ gencnval                             rev
+ gendict                              rfcomm
+ genisoimage                          rgb3toppm
+ genrb                                rgrep
+ geqn                                 rhythmbox
+ GET                                  rhythmbox-client
+ getconf                              ri
+ geteltorito                          ri2.7
+ getent                               rletopnm
+ getfacl                              rlogin
+ getkeycodes                          rm
+ getmapdl                             rmdir
+ getopt                               r-mpost
+ gettext                              rnano
+ gettext.sh                           routef
+ gfortran                             routel
+ gfortran-8                           rpcgen
+ gfortran-9                           rpdfcrop
+ gftodvi                              r-pmpost
+ gftopk                               rrsync
+ gftype                               rsh
+ ghostscript                          rst2html
+ giftopnm                             rst2html4
+ ginstall-info                        rst2html5
+ gio                                  rst2latex
+ gio-querymodules                     rst2man
+ gipddecode                           rst2odt
+ git                                  rst2odt_prepstyles
+ git-receive-pack                     rst2pseudoxml
+ git-shell                            rst2s5
+ git-upload-archive                   rst2xetex
+ git-upload-pack                      rst2xml
+ gjs                                  rstart
+ gjs-console                          rstartd
+ gkbd-keyboard-display                rst-buildhtml
+ glib-compile-resources               rstpep2html
+ glib-compile-schemas                 rsync
+ glib-genmarshal                      rtstat
+ glib-gettextize                      ruby
+ glib-mkenums                         ruby2.7
+ gml2gv                               runcon
+ gnome-calculator                     rungs
+ gnome-calendar                       run-mailcap
+ gnome-characters                     run-parts
+ gnome-control-center                 run-with-aspell
+ gnome-disk-image-mounter             r-upmpost
+ gnome-disks                          rview
+ gnome-extensions                     rygel
+ gnome-font-viewer                    sane-find-scanner
+ gnome-help                           sanstats-6.0
+ gnome-keyring                        savelog
+ gnome-keyring-3                      sbattach
+ gnome-keyring-daemon                 sbigtopgm
+ gnome-language-selector              sbkeysync
+ gnome-logs                           sbsiglist
+ gnome-power-statistics               sbsign
+ gnome-screenshot                     sbvarsign
+ gnome-session                        sbverify
+ gnome-session-custom-session         scanimage
+ gnome-session-inhibit                sccmap
+ gnome-session-properties             scor2prt
+ gnome-session-quit                   scp
+ gnome-session-remmina                scp-dbus-service
+ gnome-shell                          screendump
+ gnome-shell-extension-tool           script
+ gnome-shell-perf-tool                scriptreplay
+ gnome-system-monitor                 sdiff
+ gnome-terminal                       sdptool
+ gnome-terminal.real                  seahorse
+ gnome-terminal.wrapper               sed
+ gnome-text-editor                    see
+ gnome-thumbnail-font                 select-default-iwrap
+ gnome-todo                           select-editor
+ gnome-www-browser                    sensible-browser
+ gobject-query                        sensible-editor
+ gold                                 sensible-pager
+ gouldtoppm                           seq
+ gpasswd                              session-migration
+ gpg                                  sessreg
+ gpg-agent                            setarch
+ gpgcompose                           setfacl
+ gpgconf                              setfont
+ gpg-connect-agent                    setkeycodes
+ gpgparsemail                         setleds
+ gpgsm                                setlogcons
+ gpgsplit                             setmetamode
+ gpgtar                               setpci
+ gpgv                                 setpriv
+ gpg-wks-server                       setsid
+ gpg-zip                              setterm
+ gpic                                 setupcon
+ gprof                                setxkbmap
+ gpu-manager                          sfdp
+ graphml2gv                           sftp
+ gregorio                             sg
+ grep                                 sgitopnm
+ gresource                            sh
+ groff                                sha1sum
+ grog                                 sha224sum
+ grops                                sha256sum
+ grotty                               sha384sum
+ groups                               sha512sum
+ grub-editenv                         shasum
+ grub-file                            shotwell
+ grub-fstest                          showconsolefont
+ grub-glue-efi                        showkey
+ grub-kbdcomp                         showrgb
+ grub-menulst2cfg                     shred
+ grub-mkfont                          shuf
+ grub-mkimage                         simpdftex
+ grub-mklayout                        simple-scan
+ grub-mknetdir                        sirtopnm
+ grub-mkpasswd-pbkdf2                 size
+ grub-mkrelpath                       skill
+ grub-mkrescue                        slabtop
+ grub-mkstandalone                    sldtoppm
+ grub-mount                           sleep
+ grub-ntldr-img                       slogin
+ grub-render-label                    slxdecode
+ grub-script-check                    smproxy
+ grub-syslinux2cfg                    snap
+ gs                                   snapctl
+ gsbj                                 snapfuse
+ gsdj                                 snice
+ gsdj500                              soelim
+ gsettings                            soffice
+ gsftopk                              software-properties-gtk
+ gsl-config                           sort
+ gsl-histogram                        sotruss
+ gslj                                 spctoppm
+ gslp                                 spd-conf
+ gsl-randist                          spd-say
+ gsnd                                 speaker-test
+ gst-device-monitor-1.0               speech-dispatcher
+ gst-discoverer-1.0                   sphinx-apidoc
+ gst-inspect-1.0                      sphinx-autogen
+ gst-launch-1.0                       sphinx-build
+ gst-play-1.0                         sphinx-quickstart
+ gstreamer-codec-install              spice-vdagent
+ gst-typefind-1.0                     splain
+ gtbl                                 split
+ gtester                              splitfont
+ gtester-report                       splitindex
+ gtf                                  sprof
+ gtk-builder-tool                     sputoppm
+ gtk-encode-symbolic-svg              sqldiff
+ gtk-launch                           sqlite
+ gtk-query-settings                   sqlite3
+ gtk-update-icon-cache                srcredact
+ gts2dxf                              ss
+ gts2oogl                             ssh
+ gts2stl                              ssh-add
+ gts2xyz                              ssh-agent
+ gtscheck                             ssh-argv0
+ gtscompare                           ssh-copy-id
+ gts-config                           ssh-keygen
+ gtstemplate                          ssh-keyscan
+ gunzip                               st4topgm
+ gv2gml                               start-pulseaudio-x11
+ gv2gxl                               startx
+ gvcolor                              stat
+ gvfs-cat                             static-sh
+ gvfs-copy                            stdbuf
+ gvfs-info                            stl2gts
+ gvfs-less                            strace
+ gvfs-ls                              strace-log-merge
+ gvfs-mime                            stream
+ gvfs-mkdir                           stream-im6
+ gvfs-monitor-dir                     stream-im6.q16
+ gvfs-monitor-file                    strings
+ gvfs-mount                           strip
+ gvfs-move                            stty
+ gvfs-open                            sty2dtx
+ gvfs-rename                          su
+ gvfs-rm                              sudo
+ gvfs-save                            sudoedit
+ gvfs-set-attribute                   sudoreplay
+ gvfs-trash                           sum
+ gvfs-tree                            svn-multi
+ gvgen                                symcryptrun
+ gvmap                                sync
+ gvmap.sh                             synctex
+ gvpack                               syslinux
+ gvpr                                 syslinux-legacy
+ gxl2dot                              system-config-printer
+ gxl2gv                               system-config-printer-applet
+ gzexe                                systemctl
+ gzip                                 systemd
+ h2ph                                 systemd-analyze
+ h2xs                                 systemd-ask-password
+ hbpldecode                           systemd-cat
+ hciattach                            systemd-cgls
+ hciconfig                            systemd-cgtop
+ hcitool                              systemd-delta
+ hd                                   systemd-detect-virt
+ head                                 systemd-escape
+ HEAD                                 systemd-hwdb
+ helpztags                            systemd-id128
+ hex2hcd                              systemd-inhibit
+ hexdump                              systemd-machine-id-setup
+ hg                                   systemd-mount
+ hg-ssh                               systemd-notify
+ hipercdecode                         systemd-path
+ hipstopgm                            systemd-resolve
+ host                                 systemd-run
+ hostid                               systemd-socket-activate
+ hostname                             systemd-stdio-bridge
+ hostnamectl                          systemd-sysusers
+ hp-align                             systemd-tmpfiles
+ hp-check                             systemd-tty-ask-password-agent
+ hp-clean                             systemd-umount
+ hp-colorcal                          t1ascii
+ hp-config_usb_printer                t1asm
+ hp-doctor                            t1binary
+ hp-firmware                          t1disasm
+ hp-info                              t1mac
+ hp-levels                            t1unmac
+ hp-logcapture                        t4ht
+ hp-makeuri                           tabs
+ hp-pkservice                         tac
+ hp-plugin                            tail
+ hp-plugin-ubuntu                     tangle
+ hp-probe                             tar
+ hp-query                             taskset
+ hp-scan                              tbl
+ hp-setup                             tclsh
+ hp-testpage                          tclsh8.6
+ hp-timedate                          tee
+ ht                                   telnet
+ htcontext                            telnet.netkit
+ htlatex                              tempfile
+ htmex                                test
+ httex                                tex
+ httexi                               tex2aspc
+ htxelatex                            tex4ebook
+ htxetex                              tex4ht
+ humfsify                             texconfig
+ hwe-support-status                   texconfig-dialog
+ i386                                 texconfig-sys
+ i686-linux-gnu-pkg-config            texcount
+ ibus                                 texdef
+ ibus-daemon                          texdiff
+ ibus-setup                           texdirflatten
+ ibus-table-createdb                  texdoc
+ iceauth                              texdoctk
+ ico                                  texfot
+ icontopbm                            texhash
+ iconv                                texlinks
+ icuinfo                              texliveonfly
+ id                                   texloganalyser
+ identify                             texlua
+ identify-im6                         texluac
+ identify-im6.q16                     texluajit
+ iecset                               texluajitc
+ ifnames                              texosquery
+ ijs_pxljr                            texosquery-jre5
+ ilbmtoppm                            texosquery-jre8
+ imagetops                            texplate
+ im-config                            tftopl
+ imgtoppm                             tgatoppm
+ im-launch                            tgz
+ import                               thinkjettopbm
+ import-im6                           thumbpdf
+ import-im6.q16                       thunderbird
+ info                                 tic
+ infobrowser                          tie
+ infocmp                              tifftopnm
+ infotocap                            tificc
+ inimf                                time
+ initex                               timedatectl
+ inputattach                          timeout
+ install                              tlmgr
+ installfont-tl                       tload
+ install-info                         tl-paper
+ install-printerdriver                toe
+ instmodsh                            top
+ intel-virtual-output                 totem
+ ionice                               totem-video-thumbnailer
+ ip                                   touch
+ ipcmk                                tpic2pdftex
+ ipcrm                                tput
+ ipcs                                 tr
+ ipod-read-sysinfo-extended           tracepath
+ ipod-time-sync                       traceroute6
+ ippfind                              traceroute6.iputils
+ ipptool                              tracker
+ iptables-xml                         transform
+ irb                                  transicc
+ irb2.7                               transmission-gtk
+ ischroot                             transset
+ isdv4-serial-debugger                tred
+ isdv4-serial-inputattach             troff
+ isodump                              true
+ isoinfo                              truncate
+ isovfy                               trust
+ ispell-wrapper                       tset
+ jailtest                             tsort
+ join                                 ttf2afm
+ journalctl                           ttf2pk
+ jpegtopnm                            ttf2tfm
+ jpgicc                               ttfdump
+ json_pp                              ttfread
+ kbdinfo                              tty
+ kbd_mode                             tunctl
+ kbxutil                              twopi
+ kernel-install                       typeoutfileinfo
+ kerneloops-submit                    tzselect
+ ketcindy                             ua
+ keyring                              ubuntu-advantage
+ kill                                 ubuntu-bug
+ killall                              ubuntu-core-launcher
+ kmod                                 ubuntu-distro-info
+ kmodsign                             ubuntu-drivers
+ koi8rxterm                           ubuntu-report
+ kpseaccess                           ubuntu-security-status
+ kpsepath                             ucf
+ kpsereadlink                         ucfq
+ kpsestat                             ucfr
+ kpsetool                             uconv
+ kpsewhere                            ucs2any
+ kpsewhich                            udevadm
+ kpsexpand                            udisksctl
+ l2ping                               uic
+ l2test                               uic3
+ l3build                              ul
+ l4p-tmpl                             ulockmgr_server
+ laptop-detect                        umax_pp
+ last                                 uml_mconsole
+ lastb                                uml_mkcow
+ lastlog                              uml_moo
+ latex                                uml_mount
+ latex2man                            uml_net
+ latex2nemeth                         uml_switch
+ latexdef                             uml_watchdog
+ latex-dev                            umount
+ latexfileversion                     uname
+ latex-git-log                        unattended-upgrade
+ latexindent                          unattended-upgrades
+ latexmk                              uncompress
+ latexpand                            uncrustify
+ latex-papersize                      unexpand
+ latex-wordcount                      unflatten
+ lavadecode                           unicode_start
+ lcf                                  unicode_stop
+ lconvert                             uniq
+ ld                                   unity-scope-loader
+ ld.bfd                               unlink
+ ldd                                  unlz4
+ ld.gold                              unlzma
+ leaftoppm                            unmkinitramfs
+ lefty                                unopkg
+ less                                 unrar
+ lessecho                             unrar-nonfree
+ lessfile                             unshare
+ lesskey                              unsquashfs
+ lesspipe                             unxz
+ lexgrog                              unzip
+ libnetcfg                            unzipsfx
+ libpng16-config                      upbibtex
+ libpng-config                        update-alternatives
+ libreoffice                          update-desktop-database
+ libtoolize                           update-manager
+ libwacom-list-local-devices          update-mime-database
+ linguist                             update-notifier
+ link                                 updmap
+ linkicc                              updmap-sys
+ linux32                              updmap-user
+ linux64                              updvitomp
+ linux-boot-prober                    updvitype
+ linux-check-removal                  upmendex
+ linux-update-symlinks                upmpost
+ linux-version                        upower
+ lispmtopgm                           uppltotf
+ listings-ext                         uptex
+ listres                              uptftopl
+ llc-6.0                              uptime
+ lli-6.0                              usb-creator-gtk
+ lli-child-target-6.0                 usb-devices
+ llvm-ar-6.0                          usbhid-dump
+ llvm-as-6.0                          usb_printerid
+ llvm-bcanalyzer-6.0                  usbreset
+ llvm-cat-6.0                         users
+ llvm-cfi-verify-6.0                  utmpdump
+ llvm-config-6.0                      uuidgen
+ llvm-cov-6.0                         uuidparse
+ llvm-c-test-6.0                      uxterm
+ llvm-cvtres-6.0                      uz
+ llvm-cxxdump-6.0                     valgrind
+ llvm-cxxfilt-6.0                     valgrind.bin
+ llvm-diff-6.0                        valgrind-di-server
+ llvm-dis-6.0                         valgrind-listener
+ llvm-dlltool-6.0                     vdir
+ llvm-dsymutil-6.0                    verify-uselistorder-6.0
+ llvm-dwarfdump-6.0                   veyon-auth-helper
+ llvm-dwp-6.0                         veyon-cli
+ llvm-extract-6.0                     veyon-configurator
+ llvm-lib-6.0                         veyon-master
+ llvm-link-6.0                        veyon-server
+ llvm-lto2-6.0                        veyon-service
+ llvm-lto-6.0                         veyon-worker
+ llvm-mc-6.0                          vftovp
+ llvm-mcmarkup-6.0                    vgdb
+ llvm-modextract-6.0                  vi
+ llvm-mt-6.0                          view
+ llvm-nm-6.0                          viewres
+ llvm-objcopy-6.0                     vimdot
+ llvm-objdump-6.0                     vim.tiny
+ llvm-opt-report-6.0                  vlna
+ llvm-pdbutil-6.0                     vmstat
+ llvm-PerfectShuffle-6.0              vmwarectrl
+ llvm-profdata-6.0                    volname
+ llvm-ranlib-6.0                      vpe
+ llvm-rc-6.0                          vpl2ovp
+ llvm-readelf-6.0                     vpl2vpl
+ llvm-readobj-6.0                     vptovf
+ llvm-rtdyld-6.0                      vstp
+ llvm-size-6.0                        w
+ llvm-split-6.0                       wall
+ llvm-stress-6.0                      watch
+ llvm-strings-6.0                     watchgnupg
+ llvm-symbolizer-6.0                  wayland-scanner
+ llvm-tblgen-6.0                      wbmptopbm
+ llvm-xray-6.0                        wc
+ ln                                   wdctl
+ lneato                               weave
+ lnstat                               webquiz
+ loadkeys                             wget
+ loadunimap                           whatis
+ localc                               whereis
+ locale                               which
+ locale-check                         whiptail
+ localectl                            who
+ localedef                            whoami
+ lodraw                               whoopsie
+ loffice                              whoopsie-preferences
+ lofromtemplate                       winicontoppm
+ logger                               wish
+ login                                wish8.6
+ loginctl                             wofm2opl
+ logname                              wopl2ofm
+ loimpress                            word-list-compress
+ lomath                               wovf2ovp
+ look                                 wovp2ovf
+ lorder                               wpa_passphrase
+ loweb                                w.procps
+ lowntfs-3g                           write
+ lowriter                             X
+ lp                                   X11
+ lpoptions                            x11perf
+ lpq                                  x11perfcomp
+ lpr                                  x86_64
+ lprm                                 x86_64-linux-gnu-addr2line
+ lp_solve                             x86_64-linux-gnu-ar
+ lpstat                               x86_64-linux-gnu-as
+ lrelease                             x86_64-linux-gnu-c++filt
+ ls                                   x86_64-linux-gnu-cpp
+ lsattr                               x86_64-linux-gnu-cpp-8
+ lsblk                                x86_64-linux-gnu-cpp-9
+ lsb_release                          x86_64-linux-gnu-dwp
+ lscpu                                x86_64-linux-gnu-elfedit
+ lshw                                 x86_64-linux-gnu-g++
+ lsinitramfs                          x86_64-linux-gnu-g++-9
+ lsipc                                x86_64-linux-gnu-gcc
+ lslocks                              x86_64-linux-gnu-gcc-8
+ lslogins                             x86_64-linux-gnu-gcc-9
+ lsmem                                x86_64-linux-gnu-gcc-ar
+ lsmod                                x86_64-linux-gnu-gcc-ar-8
+ lsns                                 x86_64-linux-gnu-gcc-ar-9
+ lsof                                 x86_64-linux-gnu-gcc-nm
+ lspci                                x86_64-linux-gnu-gcc-nm-8
+ lspgpot                              x86_64-linux-gnu-gcc-nm-9
+ lsusb                                x86_64-linux-gnu-gcc-ranlib
+ ltrace                               x86_64-linux-gnu-gcc-ranlib-8
+ ltxfileinfo                          x86_64-linux-gnu-gcc-ranlib-9
+ ltximg                               x86_64-linux-gnu-gcov
+ luajittex                            x86_64-linux-gnu-gcov-8
+ lualatex                             x86_64-linux-gnu-gcov-9
+ lualatex-dev                         x86_64-linux-gnu-gcov-dump
+ luatex                               x86_64-linux-gnu-gcov-dump-8
+ luit                                 x86_64-linux-gnu-gcov-dump-9
+ lupdate                              x86_64-linux-gnu-gcov-tool
+ lwarpmk                              x86_64-linux-gnu-gcov-tool-8
+ lwp-download                         x86_64-linux-gnu-gcov-tool-9
+ lwp-dump                             x86_64-linux-gnu-gfortran
+ lwp-mirror                           x86_64-linux-gnu-gfortran-8
+ lwp-request                          x86_64-linux-gnu-gfortran-9
+ lxc-attach                           x86_64-linux-gnu-gold
+ lxc-autostart                        x86_64-linux-gnu-gprof
+ lxc-cgroup                           x86_64-linux-gnu-ld
+ lxc-checkconfig                      x86_64-linux-gnu-ld.bfd
+ lxc-checkpoint                       x86_64-linux-gnu-ld.gold
+ lxc-config                           x86_64-linux-gnu-nm
+ lxc-console                          x86_64-linux-gnu-objcopy
+ lxc-copy                             x86_64-linux-gnu-objdump
+ lxc-create                           x86_64-linux-gnu-pkg-config
+ lxc-destroy                          x86_64-linux-gnu-python3.8-config
+ lxc-device                           x86_64-linux-gnu-python3-config
+ lxc-execute                          x86_64-linux-gnu-qmake
+ lxc-freeze                           x86_64-linux-gnu-ranlib
+ lxcfs                                x86_64-linux-gnu-readelf
+ lxc-info                             x86_64-linux-gnu-size
+ lxc-ls                               x86_64-linux-gnu-strings
+ lxc-monitor                          x86_64-linux-gnu-strip
+ lxc-snapshot                         x86_64-pc-linux-gnu-pkg-config
+ lxc-start                            xargs
+ lxc-stop                             xauth
+ lxc-top                              xbiff
+ lxc-unfreeze                         xbmtopbm
+ lxc-unshare                          xbrlapi
+ lxc-update-config                    xcalc
+ lxc-usernsexec                       xclipboard
+ lxc-wait                             xclock
+ lxterm                               xcmsdb
+ lz                                   xconsole
+ lz4                                  xcursorgen
+ lz4c                                 xcutsel
+ lz4cat                               xdg-dbus-proxy
+ lzcat                                xdg-desktop-icon
+ lzcmp                                xdg-desktop-menu
+ lzdiff                               xdg-email
+ lzegrep                              xdg-icon-resource
+ lzfgrep                              xdg-mime
+ lzgrep                               xdg-open
+ lzless                               xdg-screensaver
+ lzma                                 xdg-settings
+ lzmainfo                             xdg-user-dir
+ lzmore                               xdg-user-dirs-gtk-update
+ m2300w                               xdg-user-dirs-update
+ m2300w-wrapper                       xditview
+ m2400w                               xdpyinfo
+ m4                                   xdriinfo
+ macptopbm                            xdvi
+ mag                                  xdvi.bin
+ make                                 xdvipdfmx
+ make4ht                              xdvi-xaw
+ makeconv                             xedit
+ makedtx                              Xephyr
+ make-first-existing-target           xetex
+ makeglossaries                       xev
+ makeglossaries-lite                  xeyes
+ makeindex                            xfd
+ makejvf                              xfontsel
+ mako-render                          xgamma
+ man                                  xgc
+ mandb                                xhlatex
+ manpath                              xhost
+ man-recode                           ximtoppm
+ mapscrn                              xindex
+ match_parens                         xinit
+ mathspic                             xinput
+ mattrib                              xkbbell
+ mawk                                 xkbcomp
+ mbadblocks                           xkbevd
+ mcat                                 xkbprint
+ mcd                                  xkbvleds
+ mcheck                               xkbwatch
+ mclasserase                          xkeystone
+ mcomp                                xkill
+ mcookie                              xload
+ mcopy                                xlogo
+ md5sum                               xlsatoms
+ md5sum.textutils                     xlsclients
+ mdatopbm                             xlsfonts
+ mdel                                 xmag
+ mdeltree                             xman
+ mdig                                 xmessage
+ mdir                                 xml2-config
+ mdu                                  xmlpatterns
+ mendex                               xmlpatternsvalidator
+ mesa-overlay-control.py              xmodmap
+ mesg                                 xmore
+ mf                                   Xorg
+ mf2pt1                               xpmtoppm
+ mflua                                xprop
+ mfluajit                             xqxdecode
+ mfluajit-nowin                       xrandr
+ mflua-nowin                          xrdb
+ mf-nowin                             xrefresh
+ mformat                              x-session-manager
+ mfplain                              xset
+ mft                                  xsetmode
+ mgrtopbm                             xsetpointer
+ migrate-pubring-from-classic-gpg     xsetroot
+ mimeopen                             xsetwacom
+ mimetype                             xsm
+ min12xxw                             xstdcmap
+ minfo                                xsubpp
+ mingle                               xterm
+ mk4ht                                x-terminal-emulator
+ mkdir                                xvidtune
+ mkfifo                               xvinfo
+ mkfontdir                            xvminitoppm
+ mkfontscale                          Xwayland
+ mkindex                              xwd
+ mkisofs                              xwdtopnm
+ mkjobtexmf                           x-window-manager
+ mkmanifest                           xwininfo
+ mk_modmap                            xwud
+ mknod                                x-www-browser
+ mkocp                                xxd
+ mkofm                                xz
+ mkpic                                xzcat
+ mksquashfs                           xzcmp
+ mkt1font                             xzdiff
+ mktemp                               xzegrep
+ mktexfmt                             xzfgrep
+ mktexlsr                             xzgrep
+ mktexmf                              xzless
+ mktexpk                              xzmore
+ mktextfm                             y2racc2.7
+ mkzftree                             yaml2obj-6.0
+ mlabel                               yaml-bench-6.0
+ mm2gv                                ybmtopbm
+ mmcli                                yelp
+ mmd                                  yes
+ mmount                               ypdomainname
+ mmove                                yplan
+ moc                                  yuvsplittoppm
+ mogrify                              yuvtoppm
+ mogrify-im6                          zcat
+ mogrify-im6.q16                      zcmp
+ mokutil                              zdiff
+ monitor-sensor                       zdump
+ montage                              zegrep
+ montage-im6                          zeisstopnm
+ montage-im6.q16                      zenity
+ more                                 zfgrep
+ mount                                zforce
+ mountpoint                           zgrep
+ mousetweaks                          zip
+ mpartition                           zipcloak
+ mpic++                               zipdetails
+ mpicc                                zipgrep
+ mpiCC                                zipinfo
+ mpicc.openmpi                        zipnote
+ mpiCC.openmpi                        zipsplit
+ mpic++.openmpi                       zjsdecode
+ mpicxx                               zless
+ mpicxx.openmpi                       zmore
+ mpiexec                              znew
+STUDENT1@MIT-ICT-LAB8-10:/usr/bin$ cd ..
+STUDENT1@MIT-ICT-LAB8-10:/usr$ cd ..
+STUDENT1@MIT-ICT-LAB8-10:/$ cd 210911310
+bash: cd: 210911310: No such file or directory
+STUDENT1@MIT-ICT-LAB8-10:/$ cd ..
+STUDENT1@MIT-ICT-LAB8-10:/$ cd Desktop
+bash: cd: Desktop: No such file or directory
+STUDENT1@MIT-ICT-LAB8-10:/$ cd home
+STUDENT1@MIT-ICT-LAB8-10:/home$ cd 210911310
+bash: cd: 210911310: No such file or directory
+STUDENT1@MIT-ICT-LAB8-10:/home$ cd ..
+STUDENT1@MIT-ICT-LAB8-10:/$ cd 210911310
+bash: cd: 210911310: No such file or directory
+STUDENT1@MIT-ICT-LAB8-10:/$ ls
+bin   cdrom  etc   lib    lib64   lost+found  mnt  proc  run   snap  sys  usr
+boot  dev    home  lib32  libx32  media       opt  root  sbin  srv   tmp  var
+STUDENT1@MIT-ICT-LAB8-10:/$ cd~
+
+Command 'cd~' not found, did you mean:
+
+  command 'cdo' from deb cdo (1.9.9~rc1-1)
+  command 'cd5' from deb cd5 (0.1-4)
+  command 'cdp' from deb irpas (0.10-7)
+  command 'cde' from deb cde (0.1+git9-g551e54d-1.1build1)
+  command 'cdw' from deb cdw (0.8.1-1build4)
+  command 'cdb' from deb tinycdb (0.78build1)
+  command 'cdi' from deb cdo (1.9.9~rc1-1)
+
+Try: apt install <deb name>
+
+STUDENT1@MIT-ICT-LAB8-10:/$ cd ~
+STUDENT1@MIT-ICT-LAB8-10:~$ cd 210911310
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ ls
+ file.txt  'LAB 1'        newtext.txt
+ lab1       newfile.txt  'OS LAB MANUAL 2022.pdf'
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ ls -l
+total 1672
+-rw-rw-r-- 1 STUDENT1 STUDENT1      24 Jan 30 15:21  file.txt
+-rw-rw-r-- 1 STUDENT1 STUDENT1       0 Jan 30 15:45  lab1
+drwxrwxr-x 2 STUDENT1 STUDENT1    4096 Jan 30 14:31 'LAB 1'
+-rw-rw-r-- 1 STUDENT1 STUDENT1       0 Jan 30 14:15  newfile.txt
+-rw-rw-r-- 1 STUDENT1 STUDENT1      24 Jan 30 14:17  newtext.txt
+-rw-rw-r-- 1 STUDENT1 STUDENT1 1699799 Jan 30 16:17 'OS LAB MANUAL 2022.pdf'
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ ls --color
+ file.txt  'LAB 1'        newtext.txt
+ lab1       newfile.txt  'OS LAB MANUAL 2022.pdf'
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ cat -n file.txt
+     1	hi
+     2	this is my first lab
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ ls [!a]
+ls: cannot access '[!a]': No such file or directory
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ ls [!'a']
+ls: cannot access '[!a]': No such file or directory
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ ls [!'a'].txt
+ls: cannot access '[!a].txt': No such file or directory
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ ls [!'a']*
+ file.txt   lab1   newfile.txt   newtext.txt  'OS LAB MANUAL'
+
+'LAB 1':
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ ls [!a]*
+ file.txt   lab1   newfile.txt   newtext.txt  'OS LAB MANUAL'
+
+'LAB 1':
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ ls[!f]*
+ls[!f]*: command not found
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ ls [!f]*
+ lab1   newfile.txt   newtext.txt  'OS LAB MANUAL'
+
+'LAB 1':
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ ls [!f!n]
+bash: !n]: event not found
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ ls [!f !n]*
+bash: !n]: event not found
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ ls [!fn]8\
+> ^C
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ ls [!fn]*
+ lab1  'OS LAB MANUAL'
+
+'LAB 1':
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ ls *.txt
+file.txt  newfile.txt  newtext.txt
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ ls ?????*
+ file.txt   newfile.txt   newtext.txt  'OS LAB MANUAL'
+
+'LAB 1':
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ ls ?????
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ ls [0-9]*
+ls: cannot access '[0-9]*': No such file or directory
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ ls *[0-9]*
+ lab1
+
+'LAB 1':
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ touch 1234.txt
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ ls *[0-9]*
+ 1234.txt   lab1
+
+'LAB 1':
+STUDENT1@MIT-ICT-LAB8-10:~/210911310$ 
+

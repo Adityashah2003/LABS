@@ -1,28 +1,29 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-stack <int> s;
+queue <int> q;
 int vertices, edges;
 int adj[10][10];
-int counter=0;
 
-void addEdge(int x,int y){
+void addEdge(int x,int y)
+{
     adj[x][y] = 1;
     adj[y][x] = 1;
-    counter+=2;
 }
-
-void dfs(int source,int visited[]){
-    cout<<source;
-    visited[source]=1;
-    counter+=3;
-    for(int i=0;i<vertices;i++){
-        if(adj[source][i]==1 && visited[i]==0){
-                dfs(i,visited);
-                counter+=2;
+void bfs(int source,int visited[]){
+    int z;
+    q.push(source);
+    while(!q.empty()){
+        z = q.front();
+        cout<<z;
+        q.pop();
+        for(int i=0;i<vertices;i++){
+            if(adj[z][i]==1 && visited[i]==0){
+                visited[i]=1;
+                q.push(i);
             }
+        }
     }
-    counter++;
 }
 
 int main(){
@@ -40,8 +41,10 @@ int main(){
         addEdge(m,n);
     }
     cout << "\nThe Adjacency Matrix is : \n\n";
-    for (i = 0; i < vertices; i++){
-        for (j = 0; j < vertices; j++){
+    for (i = 0; i < vertices; i++)
+    {
+        for (j = 0; j < vertices; j++)
+        {
             cout << adj[i][j] << " ";
         }
         cout << endl;
@@ -55,8 +58,8 @@ int main(){
     int visited[10];
     for (i = 0; i < 10; i++)
         visited[i] = 0;
+    visited[source] = 1;
 
-    cout << "\nDFS is : ";
-    dfs(source,visited);
-    cout<<counter;
+    cout << "\nBFS is : ";
+    bfs(source,visited);
 }
