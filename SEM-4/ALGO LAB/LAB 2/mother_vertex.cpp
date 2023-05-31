@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-stack <int> s;
 int vertices, edges;
 int adj[10][10];
 
@@ -30,9 +29,8 @@ void mother_vertex(){
     }
     for(int i=0;i<vertices;i++)
         visited[i]=0;
-
+        
     dfs(v,visited);
-
     for(int i=0;i<vertices;i++){
         if(visited[i]==0)
             break;

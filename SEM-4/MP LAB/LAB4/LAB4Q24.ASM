@@ -1,0 +1,25 @@
+DATA SEGMENT
+A DD 00000009H
+B DW 0FFFCH
+Q DW ?
+R DW ?
+DATA ENDS
+
+CODE SEGMENT
+ASSUME CS: CODE, DS: DATA
+START:
+        MOV AX, DATA
+        MOV DS, AX
+
+        MOV AX,A
+        MOV DX,A + 2
+        IDIV B
+        MOV Q, AX
+        MOV R, DX
+
+        MOV AH, 4CH
+        INT 21H
+
+CODE ENDS
+END START
+

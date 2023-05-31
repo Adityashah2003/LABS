@@ -1,26 +1,26 @@
-data segment
-hex db 0ADh
-divi db 0Ah
-bcd db 00h
-data ends
-code segment
-assume cs:code,ds:data
-start:
-mov ax,data
-mov ds,ax
-mov ax,00h
-mov al,hex
-lea si,bcd
+DATA SEGMENT
+HEX DB 0ADh
+DIVISOR DB 0Ah
+BCD DB 00h
+DATA ENDS
+
+CODE SEGMENT
+ASSUME CS: CODE, DS: DATA
+START:
+MOV AX, DATA
+MOV DS, AX
+MOV AX, 00h
+MOV AL, HEX
+LEA SI, BCD
 L1:
-        div divi
-        mov [si],ah
-        inc si
-        cmp al,divi
-        mov ah,00h
-        JAE L1
-mov [si],al
-mov ah,4ch
-int 21h
-code ends
-end start
-        
+    DIV AL, DIVISOR
+    MOV [SI], AH
+    INC SI
+    CMP AL, DIVISOR
+    MOV AH, 00h
+    JAE L1
+MOV [SI], AL
+MOV AH, 4Ch
+INT 21h
+CODE ENDS
+END START

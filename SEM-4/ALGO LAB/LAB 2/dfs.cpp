@@ -1,32 +1,22 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-stack <int> s;
 int vertices, edges;
 int adj[10][10];
-int counter=0;
-
 void addEdge(int x,int y){
     adj[x][y] = 1;
     adj[y][x] = 1;
-    counter+=2;
 }
-
 void dfs(int source,int visited[]){
     cout<<source;
     visited[source]=1;
-    counter+=3;
     for(int i=0;i<vertices;i++){
         if(adj[source][i]==1 && visited[i]==0){
                 dfs(i,visited);
-                counter+=2;
-            }
+        }
     }
-    counter++;
 }
-
 int main(){
-
     int i, j,m=0,n=0;
     cout << "Enter Number of Vertices : ";
     cin >> vertices;
@@ -58,5 +48,4 @@ int main(){
 
     cout << "\nDFS is : ";
     dfs(source,visited);
-    cout<<counter;
 }

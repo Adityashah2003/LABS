@@ -1,73 +1,101 @@
-#include <bits/stdc++.h>
+#include<iostream>
+#include<stack>
 using namespace std;
 
-queue <int> q;
-int vertices, edges;
-int adj[10][10];
-int counter=0;
-int flag=0;
+void DFS(int v,int visited[],int n,int a[][10])
+{
+    stack<int> Q;
+    visited[v]=1;
+    Q.push(v);
 
-void addEdge(int x,int y){
-    adj[x][y] = 1;
-    adj[y][x]=1;
-}
-void bfs(int source,int visited[]){
-    int z;
-    q.push(source);
-    while(!q.empty()){
-        z = q.front();
-        q.pop();
-        for(int i=0;i<vertices;i++){
-            if(adj[z][i]==1 && visited[i]==0){
-                visited[i]=1;
-                q.push(i);
+    while(!Q.empty())
+    {
+        int w;
+        w=Q.top();
+        Q.pop();
+        for(int u=1;u<=n;u++)
+        {
+            if(a[w][u]==1 && visited[u]==0)
+            {
+                Q.push(u);
+                visited[u]=1;
             }
         }
     }
-    for(int i=0;i<vertices;i++){
-        cout<<visited[i];
-        if(visited[i]==0)
-            flag=1;
-    }
-    if(flag==0)
-        cout<<"Connected"<<endl;
-    else
-        cout<<"Not Connected";
 }
 
-int main(){
+void transpose(int a[][10],int n)
+{
+    int b[10][10];
 
-    int i, j,m=0,n=0;
-    cout << "Enter Number of Vertices : ";
-    cin >> vertices;
-    cout << "Enter Number of Edges : ";
-    cin >> edges;
-
-    for(i=0;i<edges;i++){
-        cout<<"Enter the adjacency matrix";
-        cin>>m;
-        cin>>n;
-        addEdge(m,n);
-    }
-    cout << "\nThe Adjacency Matrix is : \n\n";
-    for (i = 0; i < vertices; i++){
-        for (j = 0; j < vertices; j++){
-            cout << adj[i][j] << " ";
+    for(int i=1;i<=n;i++)
+    {
+        for(int j=1;j<=n;j++)
+        {
+            b[i][j]=a[j][i];
         }
-        cout << endl;
     }
-    cout << endl;
+    for(int i=1;i<=n;i++)
+    {
+        for(int j=1;j<=n;j++)
+        {
+            a[i][j]=b[i][j];
+        }
+    }
+}
 
-    cout << "Enter Source : ";
-    int source;
-    cin >> source;
+int main()
+{
+    int a[10][10],n,m,x,p,q;
+    cout<<"enter number of vertices- ";
+    cin>>n;
+    cout<<"enter number of edges- ";
+    cin>>m;
 
-    int visited[vertices];
-    for (i = 0; i < vertices; i++)
-        visited[i] = 0;
-    visited[source] = 1;
+    for(int i=1;i<=n;i++)
+    {
+        for(int j=1;j<=n;j++)
+        {
+            a[i][j]=0;
+        }
+    }
+    for(int i=1;i<=m;i++)
+    {
+        cout<<"enter source- ";
+        cin>>p;
+        cout<<"enter destination- ";
+        cin>>q;
+        a[p][q]=1;
+    }
+    cout<<"the matrix is- \n";
+    for(int i=1;i<=n;i++)
+    {
+        for(int j=1;j<=n;j++)
+        {
+            cout<<a[i][j]<<"  ";
+        }
+        cout<<"\n";
+    }
 
-    //cout << "\nBFS is : ";
-    bfs(source,visited);
-    cout<<endl;
+    int vis1[n+1];
+    for(int i=1;i<=n;i++)
+        vis1[i]=0;
+
+    int vis2[n+1];
+    for(int i=1;i<=n;i++)
+        vis2[i]=0;
+
+    DFS(1,vis1,n,a);
+    transpose(a,n);
+    DFS(1,vis2,n,a);
+
+    for(int i=1;i<=n;i++)
+    {
+        if((vis1[i]==0)&&(vis2[i]==0))
+        {
+            cout<<"graph not connected";
+            return 0;
+        }
+    }
+    cout<<"graph connected";
 }

@@ -11,7 +11,7 @@ void addEdge(int x,int y)
 {
     adj[x][y] = 1;
 }
-void bfs(int source,int visited[]){
+void bfs(int source,int visited[],int destination){
     int z;
     q.push(source);
     while(!q.empty()){
@@ -62,12 +62,16 @@ int main(){
     int source;
     cin >> source;
 
+    cout << "Enter Dest : ";
+    int destination;
+    cin >> destination;
+
     int visited[vertices];
     for (i = 0; i < vertices; i++)
         visited[i] = 0;
     visited[source] = 1;
 
     //cout << "\nBFS is : ";
-    bfs(source,visited);
+    bfs(source,visited,destination);
     cout<<endl;
 }

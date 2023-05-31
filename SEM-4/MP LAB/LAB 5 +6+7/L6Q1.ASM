@@ -34,3 +34,7 @@ MOV AH, 4CH
 INT 21H
 CODE ENDS
 END START
+
+The macro first loads Num1 into the AX register and Num2 into the BX register. It then checks if AX is greater than or equal to BX. If it is not, it exchanges the values of AX and BX. This ensures that AX always holds the larger value.
+
+The macro then performs a loop that repeatedly divides AX by BX until the remainder in DX is equal to zero. At each iteration, it checks if DX is equal to zero. If it is, the loop exits and the GCD is stored in the Ans variable. If it is not, the macro sets AX to DX and repeats the loop.

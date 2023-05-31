@@ -16,7 +16,7 @@ void merge(int arr[], int p, int q, int r) {
 
     int i = 0, j = 0, k = p;
 
-    while (i < n1 && j < n2){
+    while (i < n1 && j < n2) {
         if (L[i] <= R[j]) {
             arr[k] = L[i];
             i++;
